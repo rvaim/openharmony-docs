@@ -1,46 +1,47 @@
-name: Sync OpenHarmony Docs from GitCode
+name: Sync GitCode master
 
 on:
-  # 每天 UTC 时间凌晨 0 点（北京时间上午 8 点）自动运行一次
   schedule:
-    - cron: '0 0 * * *'
-  # 提供一个手动触发的按钮
+    # 每天北京时间 00:00 执行
+    - cron: "0 0 * * *"
+      timezone: "Asia/Shanghai"
+
+  # 允许手动触发，方便测试
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-gitcode-master
+  cancel-in-progress: true
+
 jobs:
-  sync_with_upstream:
+  sync:
     runs-on: ubuntu-latest
-    name: Sync upstream master to target master
-    
+
     steps:
-      # 1. 检出你目标仓库的 master 分支
-      - name: Checkout target repo
-        uses: actions/checkout@v4
+      - name: Checkout current repository
+        uses: actions/checkout@v6
         with:
-          ref: master # 【修改点】检出本地的 master 分支
-          fetch-depth: 0 # 必须获取所有提交历史，否则无法进行合并操作
+          ref: master
+          fetch-depth: 0
 
-      # 2. 配置机器人的 Git 身份
-      - name: Set up Git
+      - name: Configure Git
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      # 3. 添加真实的 GitCode 源仓库，并进行拉取与合并
-      - name: Sync upstream changes
+      - name: Fetch GitCode master
         run: |
-          echo "正在添加源仓库地址..."
-          git remote add upstream https://gitcode.com/RainVice/openharmony-docs.git
-          
-          echo "正在拉取源仓库代码 (仓库约1.7G，请耐心等待数十秒)..."
-          git fetch upstream
-          
-          echo "正在将源仓库的 master 分支合并到目标仓库的 master 分支..."
-          # 使用 --allow-unrelated-histories 防止因导入或重命名分支产生的历史割裂问题
-          git merge upstream/master --allow-unrelated-histories -m "Auto-merge upstream master to master"
+          git remote add gitcode https://gitcode.com/RainVice/openharmony-docs.git
+          git fetch gitcode master
 
-      # 4. 推送到你的 GitHub 仓库的 master 分支
-      - name: Push changes
+      - name: Merge GitCode master into local master
         run: |
-          echo "正在将最新代码推送到 GitHub..."
-          git push origin master # 【修改点】推送到目标仓库的 master 分支
+          git checkout master
+          git merge --no-edit gitcode/master
+
+      - name: Push to GitHub master
+        run: |
+          git push origin HEAD:master
