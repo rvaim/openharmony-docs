@@ -34,7 +34,7 @@ jobs:
 
       - name: Fetch GitCode master
         run: |
-          git remote add gitcode https://gitcode.com/RainVice/openharmony-docs.git
+          git remote add gitcode https://gitcode.com/openharmony/docs.git
           git fetch gitcode master
 
       - name: Merge GitCode master into local master
