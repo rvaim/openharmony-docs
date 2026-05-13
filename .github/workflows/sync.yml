@@ -2,8 +2,8 @@ name: Sync GitCode master
 
 on:
   schedule:
-    # 每天北京时间 00:00 执行
-    - cron: "0 0 * * *"
+    # 每隔一小时执行一次
+    - cron: "0 * * * *"
       timezone: "Asia/Shanghai"
 
   # 允许手动触发，方便测试
