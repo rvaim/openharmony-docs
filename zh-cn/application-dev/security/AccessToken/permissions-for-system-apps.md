@@ -6013,6 +6013,62 @@
 
 **起始版本**：26.0.0
 
+## ohos.permission.cli.READ_ACCESSIBILITY_CONFIG_VISION
+
+允许系统应用通过CLI命令查询无障碍视觉辅助功能状态。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Phone | PC/2in1 | Tablet | TV | Wearable | Car
+
+**起始版本**：26.0.0
+
+## ohos.permission.cli.READ_ACCESSIBILITY_CONFIG_HEARING
+
+允许系统应用通过CLI命令查询无障碍听觉辅助功能状态。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Phone | PC/2in1 | Tablet | TV | Wearable | Car
+
+**起始版本**：26.0.0
+
+## ohos.permission.cli.READ_ACCESSIBILITY_CONFIG_ACTION
+
+允许系统应用通过CLI命令查询无障碍行为辅助功能状态。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Phone | PC/2in1 | Tablet | TV | Wearable | Car
+
+**起始版本**：26.0.0
+
+## ohos.permission.CONNECT_GAME_ACCELERATION
+
+允许应用调整游戏场景下策略配置。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Phone | Tablet | TV
+
+**起始版本**：26.0.0
+
 ## ohos.permission.QUERY_CLI_TOOL
 
 允许系统应用查询CLI工具。
@@ -6038,5 +6094,19 @@
 **是否支持证书授权**：true
 
 **支持设备**：Phone | PC/2in1 | Tablet
+
+**起始版本**：26.0.0
+
+## ohos.permission.cli.GET_STORAGE_MANAGER
+
+允许应用通过CLI命令查询存储。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Phone | TV | Wearable | PC/2in1 | Tablet | Car | LiteWearable
 
 **起始版本**：26.0.0
