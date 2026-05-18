@@ -3690,6 +3690,8 @@
 
 **是否支持证书授权**：true
 
+**支持设备**：Wearable
+
 **起始版本**：12
 
 ## ohos.permission.MANAGE_MOUSE_CURSOR
@@ -4626,20 +4628,6 @@
 **是否支持证书授权**：true
 
 **起始版本**：18
-
-## ohos.permission.GET_NETWORK_STATS
-
-允许系统应用获取历史流量。
-
-**权限级别**：system_basic
-
-**授权方式**：系统授权（system_grant）
-
-**是否支持证书授权**：true
-
-**起始版本**：10
-
-**变更信息**：API 10-11，是否支持证书授权为false；从API 12开始，变更为true。
 
 ## ohos.permission.READ_DLP_HIDE_SWITCH
 
@@ -6022,6 +6010,26 @@
 **是否支持证书授权**：true
 
 **支持设备**：Phone | Tablet
+
+**起始版本**：26.0.0
+
+## ohos.permission.MANAGE_SKILL_PRIVILEGE
+     
+允许系统应用使用skill的能力。
+
+获取该权限后，应用可以：
+
+- 查询skill包的信息
+- 监听skill包的安装、更新、卸载事件
+- 访问skill包安装的沙箱目录
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**ACL使能**：true
+
+**支持设备**：General
 
 **起始版本**：26.0.0
 

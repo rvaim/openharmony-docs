@@ -3690,6 +3690,8 @@ Allows a system application to access the over-the-air update directory.
 
 **Certificate-based authorization**: true
 
+**Supported devices**: wearables
+
 **Valid since**: 12
 
 ## ohos.permission.MANAGE_MOUSE_CURSOR
@@ -4628,20 +4630,6 @@ Allows an application to access the list of applications that can be started in 
 **Certificate-based authorization**: true
 
 **Valid since**: 18
-
-## ohos.permission.GET_NETWORK_STATS
-
-Allows a system application to obtain historical network traffic.
-
-**Permission level**: system_basic
-
-**Authorization mode**: system_grant
-
-**Certificate-based authorization**: true
-
-**Valid since**: 10
-
-**Changelog**: **Certificate-based authorization** is **false** for this permission in API versions 10 to 11, and is changed to **true** since API version 12.
 
 ## ohos.permission.READ_DLP_HIDE_SWITCH
 
@@ -5828,6 +5816,26 @@ Allows an application to trigger the Always On Display (AOD) mode or exit it, an
 **Certificate-based authorization**: true
 
 **Supported devices**: Phone | Tablet
+
+**Since**: 26.0.0
+
+## ohos.permission.MANAGE_SKILL_PRIVILEGE
+
+Allows a system application to use Skills.
+
+With this permission, an application can:
+
+- Query information about Skill packages.
+- Listen for events such as the installation, update, and uninstallation of Skill packages.
+- Access the sandbox directory where Skill packages are installed.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: General
 
 **Since**: 26.0.0
 
