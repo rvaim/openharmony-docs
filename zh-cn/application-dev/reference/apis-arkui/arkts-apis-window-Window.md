@@ -7594,7 +7594,7 @@ maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise&lt;void&gt;
 | 801     | Capability not supported. Function maximize can not work correctly due to limited device capabilities. |
 | 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | 1300003 | This window manager service works abnormally. |
-| 1300004 | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and maximizable subwindows are supported; 2. The acrossDisplayPresentation parameter only supports main windows. |
+| 1300004 | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and maximizable subwindows are supported; 2. The acrossDisplayPresentation parameter only supports main windows; 3. The snapshotAnimationConfig parameter only supports main windows. |
 | 1300016 | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例：**
@@ -7639,6 +7639,10 @@ setResizeByDragEnabled(enable: boolean, callback: AsyncCallback&lt;void&gt;): vo
 
 禁止/使能通过拖拽方式缩放主窗口或启用装饰的子窗口的功能。使用callback异步回调。
 
+> **说明：**
+>
+> - 针对主窗口，仅在[自由窗口](../../windowmanager/window-terminology.md#自由窗口)状态下生效，非自由窗口状态下不生效不报错。
+
 **原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -7682,6 +7686,10 @@ try {
 setResizeByDragEnabled(enable: boolean): Promise&lt;void&gt;
 
 禁止/使能通过拖拽方式缩放主窗口或启用装饰的子窗口的功能。使用Promise异步回调。
+
+> **说明：**
+>
+> - 针对主窗口，仅在[自由窗口](../../windowmanager/window-terminology.md#自由窗口)状态下生效，非自由窗口状态下不生效不报错。
 
 **原子化服务API：** 从API version 14开始，该接口支持在原子化服务中使用。
 
@@ -7823,6 +7831,7 @@ recover(snapshotAnimationConfig: WindowSnapshotAnimationConfig): Promise&lt;void
 | 1300001 | Repeated operation. |
 | 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. The window does not support floating mode. |
 | 1300003 | This window manager service works abnormally. |
+| 1300004 | Unauthorized operation. Possible cause: 1. The snapshotAnimationConfig parameter only supports main windows. |
 | 1300016 | Parameter error. Possible cause: Invalid parameter range. |
 
 **示例：**
@@ -9869,8 +9878,6 @@ enableDrag(enable: boolean): Promise&lt;void&gt;
 使能后，将允许通过鼠标操作或触摸对窗口进行拉伸操作。
 
 **系统能力：** SystemCapability.Window.SessionManager
-
-**设备行为差异：** 该接口在Phone设备、Tablet设备和2in1设备上可正常调用，在其他设备中返回801错误码。
 
 **参数：**
 
