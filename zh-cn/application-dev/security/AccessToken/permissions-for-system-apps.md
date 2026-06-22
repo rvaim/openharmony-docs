@@ -3930,6 +3930,8 @@
 
 **授权方式**：系统授权（system_grant）
 
+**支持设备**：Phone | PC/2in1 | Tablet | TV | Wearable | Car
+
 **是否支持证书授权**：true
 
 **起始版本**：12
@@ -5329,6 +5331,20 @@
 
 **起始版本**：20
 
+## ohos.permission.READ_DIAGNOSTIC_LOGS
+
+允许应用读取诊断日志。
+
+应用默认无法获取hilog日志，获取该权限后，工具类应用可以获取hilog实时输出的日志。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**支持设备**：PC/2in1
+
+**起始版本**：21
+
 ## ohos.permission.ACCESS_ANCO_APP_DATA
 
 允许应用访问兼容应用目录。
@@ -6470,6 +6486,20 @@
 **是否支持证书授权**：true
 
 **支持设备**：Phone | PC/2in1 | Tablet | TV | Wearable | Car
+
+**起始版本**：26.0.0
+
+## ohos.permission.HDC_REPORT_INFO
+
+允许系统应用订阅hdc事件。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Phone | PC/2in1 | Tablet
 
 **起始版本**：26.0.0
 

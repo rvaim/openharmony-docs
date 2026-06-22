@@ -3930,6 +3930,8 @@ Allows a system application to apply for IP addresses from the DHCP server.
 
 **Authorization mode**: system_grant
 
+**Supported devices**: phone | PCs/2-in-1 devices | tablets | TV | wearable | car
+
 **Certificate-based authorization**: true
 
 **Since**: 12
@@ -6286,6 +6288,20 @@ Allows a system application to invoke ArkWebCore extended capabilities.
 **Certificate-based authorization**: true
 
 **Supported devices**: phones | PCs/2-in-1 devices | tablets | TVs | wearables | cars
+
+**Valid since**: 26.0.0
+
+## ohos.permission.HDC_REPORT_INFO
+
+Allows a system application to subscribe to the hdc events.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: phones | PCs/2-in-1 devices | tablets
 
 **Valid since**: 26.0.0
 
