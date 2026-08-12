@@ -3530,7 +3530,7 @@ export default class EntryAbility extends UIAbility {
           promise.then(() => {
             console.info('Succeeded in disabling the raise-by-click function.');
           });
-        } catch(err) {
+        } catch (err) {
           console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
         };
       });
@@ -4058,7 +4058,7 @@ export default class EntryAbility extends UIAbility {
           mainWindow.setTitleButtonVisible(false, false, false);
         }
       ).catch((err: BusinessError) => {
-          if(err.code){
+          if (err.code) {
             console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
           }
       });
