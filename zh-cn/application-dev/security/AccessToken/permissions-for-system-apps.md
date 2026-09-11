@@ -341,9 +341,11 @@
 
 **是否支持证书授权**：true
 
-**支持设备**：Phone | PC/2in1 | Tablet
+**支持设备**：Phone | PC/2in1 | Tablet | Car
 
 **起始版本**：20
+
+**变更信息**：从API版本26.0.1开始，增加支持在设备类型Car上申请。
 
 ## ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -9217,6 +9219,20 @@
 **是否支持证书授权**：true
 
 **支持设备**：Car
+
+**起始版本**：26.1.0
+
+## ohos.permission.SWITCH_MULTI_MODE_BUNDLE
+
+允许应用在多模式设备上切换可展示的应用列表。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Tablet | PC/2in1
 
 **起始版本**：26.1.0
 
