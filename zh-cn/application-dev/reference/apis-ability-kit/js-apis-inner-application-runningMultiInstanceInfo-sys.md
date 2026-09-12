@@ -37,9 +37,9 @@ try {
   appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
       console.info(`getRunningMultiAppInfo success`);
     }).catch((err: BusinessError) => {
-      console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+      console.error(`getRunningMultiAppInfo error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
     });
-} catch (err: BusinessError) {
-  console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+} catch (err) {
+  console.error(`getRunningMultiAppInfo error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
 }
 ```
