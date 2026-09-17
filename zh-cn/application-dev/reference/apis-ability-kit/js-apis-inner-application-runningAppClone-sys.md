@@ -42,9 +42,11 @@ try {
   appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
       hilog.info(0x0000, 'testTag', `getRunningMultiAppInfo success`);
     }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
+      hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
     })
 } catch (err) {
-  hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`getRunningMultiAppInfo error, code: ${code}, message: ${msg}`);
 }
 ```
