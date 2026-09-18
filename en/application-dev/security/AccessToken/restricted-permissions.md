@@ -1717,3 +1717,17 @@ Allows an application to enter exam mode. The system service will display a dial
 **Supported devices**: phones | PCs/2-in-1 devices | tablets
 
 **Since**: 26.1.0
+
+## ohos.permission.SYNC_ROOT_MANAGER
+
+Allows apps to manage cloud drive sync roots, including adding sync roots to the sidebar and customizing sync root folder icons.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: PCs/2-in-1 devices | tablets
+
+**Since**: 26.1.0
