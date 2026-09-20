@@ -2725,11 +2725,13 @@ systemManager.destroyExactTimer(timerId).then(() => {
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 | 名称                | 类型     | 只读  | 可选 | 说明            |
 | ----------------- | ------ | ------ | ------ | ------------- |
 | name       | string | 否 | 否 | 定时器名称。最大长度为64，不能为空。   |
 | repeat       | boolean | 否 | 否 | 是否为循环定时器。true表示循环定时器，false表示单次定时器。   |
-| interval       | number | 否 | 否 | 定时器触发时间间隔。循环定时器时，interval最小值为1000 ms，最大值为86400000 ms；单次定时器时，该值为0。单位：毫秒。   |
+| interval       | number | 否 | 否 | 定时器触发时间间隔。循环定时器时，interval最小值为1000ms，最大值为86400000ms；单次定时器时，该值为0。单位：毫秒（ms）。   |
 
 ### callback
 
@@ -2740,3 +2742,5 @@ callback(): void
 **起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**模型约束：** 此接口仅可在Stage模型下使用。
