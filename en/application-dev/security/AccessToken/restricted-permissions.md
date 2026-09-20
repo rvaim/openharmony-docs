@@ -1730,4 +1730,4 @@ Allows apps to manage cloud drive sync roots, including adding sync roots to the
 
 **Supported devices**: PCs/2-in-1 devices | tablets
 
-**Since**: 26.1.0
+**Since**: 26.0.1
