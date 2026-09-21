@@ -2211,13 +2211,13 @@ try {
 
 createExactTimer(config: ExactTimerConfig): Promise&lt;number&gt;
 
-创建精确定时器。使用Promise异步回调，返回定时器ID。适用于企业设备需要精确定时执行任务的场景，例如定时巡检、定时数据上报、定时策略下发等，帮助企业管理员实现设备任务的自动化定时执行。
+创建精确定时器。适用于企业设备需要精确定时执行任务的场景，例如定时巡检、定时数据上报、定时策略下发等，帮助企业管理员实现设备任务的自动化定时执行。使用Promise异步回调。
 
 > **说明：**
 >
 > 1.该接口需与[systemManager.destroyExactTimer](#systemmanagerdestroyexacttimer)接口配合使用，否则会导致内存泄漏。
 >
-> 2.当设备管理应用被取消激活或进程死亡时，EDM服务会自动销毁该设备管理应用创建的所有定时器。
+> 2.当设备管理应用被取消激活或进程终止时，EDM服务会自动销毁该设备管理应用创建的所有定时器。
 >
 > 3.若创建的定时器名称与已存在的定时器名称相同，则先前的同名定时器将被自动停止并销毁，新创建的定时器将被分配新的定时器ID，与被销毁的定时器ID不同。
 >
@@ -2284,7 +2284,7 @@ systemManager.createExactTimer(config).then((timerId: number) => {
 
 startExactTimer(timer: number, triggerTime: number): Promise&lt;void&gt;
 
-启动精确定时器。使用Promise异步回调。定时器到期时将触发创建定时器时配置的回调函数。对于循环定时器，到达触发时间后，将按配置的interval周期性触发回调；对于单次定时器，到达触发时间后触发一次回调。适用于启动定时任务的场景。
+启动精确定时器。定时器到期时将触发创建定时器时配置的回调函数。对于循环定时器，到达触发时间后，将按配置的interval周期性触发回调；对于单次定时器，到达触发时间后触发一次回调。适用于启动定时任务的场景。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -2301,7 +2301,7 @@ startExactTimer(timer: number, triggerTime: number): Promise&lt;void&gt;
 | 参数名 | 类型                                                    | 必填 | 说明                   |
 | ------ | ------------------------------------------------------- | ---- | ---------------------- |
 | timer  | number | 是   | 定时器ID，由[systemManager.createExactTimer](#systemmanagercreateexacttimer)接口获取。 |
-| triggerTime  | number | 是   | 定时器触发时间，单位：毫秒。该值为系统启动时间，可通过[systemDateTime.getUptime](../apis-basic-services-kit/js-apis-date-time.md#systemdatetimegetuptime10)（传入[TimeType.STARTUP](../apis-basic-services-kit/js-apis-date-time.md#timetype10)）获取。 |
+| triggerTime  | number | 是   | 定时器触发时间，单位：毫秒。该值为目标触发时刻的系统启动后经过时间，需在当前系统启动后经过的时间基础上加上期望的延迟时长。例如，期望5秒后触发定时器，可通过[systemDateTime.getUptime](../apis-basic-services-kit/js-apis-date-time.md#systemdatetimegetuptime10)（传入[TimeType.STARTUP](../apis-basic-services-kit/js-apis-date-time.md#timetype10)）获取当前系统启动后经过的时间，再加上5000。 |
 
 **返回值：**
 
@@ -2345,7 +2345,7 @@ systemManager.startExactTimer(timerId, triggerTime).then(() => {
 
 stopExactTimer(timer: number): Promise&lt;void&gt;
 
-停止精确定时器。使用Promise异步回调。停止后定时器将不再触发回调，但定时器资源不会被释放，可通过[systemManager.startExactTimer](#systemmanagerstartexacttimer)接口重新启动。适用于暂停定时任务的场景。
+停止精确定时器。停止后定时器将不再触发回调，但定时器资源不会被释放，可通过[systemManager.startExactTimer](#systemmanagerstartexacttimer)接口重新启动。适用于暂停定时任务的场景。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -2401,7 +2401,7 @@ systemManager.stopExactTimer(timerId).then(() => {
 
 destroyExactTimer(timer: number): Promise&lt;void&gt;
 
-销毁精确定时器。使用Promise异步回调。销毁后定时器资源将被释放，定时器ID将失效，无法再用于启动或停止定时器。适用于不再需要定时任务的场景，帮助企业管理员及时释放系统资源。
+销毁精确定时器。销毁后定时器资源将被释放，定时器ID将失效，无法再用于启动或停止定时器。适用于不再需要定时任务的场景，帮助企业管理员及时释放系统资源。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -2729,7 +2729,7 @@ systemManager.destroyExactTimer(timerId).then(() => {
 
 | 名称                | 类型     | 只读  | 可选 | 说明            |
 | ----------------- | ------ | ------ | ------ | ------------- |
-| name       | string | 否 | 否 | 定时器名称。最大长度为64，不能为空。   |
+| name       | string | 否 | 否 | 定时器名称。最大长度为64字节，不能为空。   |
 | repeat       | boolean | 否 | 否 | 是否为循环定时器。true表示循环定时器，false表示单次定时器。   |
 | interval       | number | 否 | 否 | 定时器触发时间间隔。循环定时器时，interval最小值为1000ms，最大值为86400000ms；单次定时器时，该值为0。单位：毫秒（ms）。   |
 
