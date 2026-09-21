@@ -3973,9 +3973,9 @@ ArkTS-Sta:getAppProvisionInfoInDevice(bundleName: string, userId: int): Promise\
 
 根据bundleName和userId获取应用的[Provision](js-apis-bundleManager-AppProvisionInfo-sys.md)配置文件信息。使用Promise异步回调。
 
-**ArkTS-Dyn起始版本**：26.1.0
+**ArkTS-Dyn起始版本**：26.0.1
  
-**ArkTS-Sta起始版本**：26.1.0
+**ArkTS-Sta起始版本**：26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -4115,9 +4115,9 @@ ArkTS-Sta:getAllAppProvisionInfoInDevice(userId: int): Promise\<Array\<AppProvis
 
 根据userId获取指定用户下所有应用的[Provision](js-apis-bundleManager-AppProvisionInfo-sys.md)配置文件信息。使用Promise异步回调。
 
-**ArkTS-Dyn起始版本**：26.1.0
+**ArkTS-Dyn起始版本**：26.0.1
  
-**ArkTS-Sta起始版本**：26.1.0
+**ArkTS-Sta起始版本**：26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -4655,9 +4655,9 @@ ArkTS-Sta:setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, a
 
 设置指定应用的额外信息。此接口仅供应用市场调用。
 
-**ArkTS-Dyn起始版本**：26.1.0
+**ArkTS-Dyn起始版本**：26.0.1
  
-**ArkTS-Sta起始版本**：26.1.0
+**ArkTS-Sta起始版本**：26.0.1
 
 **系统接口：** 此接口为系统接口。
 
