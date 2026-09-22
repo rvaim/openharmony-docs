@@ -4151,7 +4151,7 @@ ArkTS-Sta:getAllAppProvisionInfoInDevice(userId: int): Promise\<Array\<AppProvis
 | 错误码ID | 错误信息                               |
 | -------- | -------------------------------------- |
 | 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| 202 | PPermission denied. A non-system application is not allowed to call a system API. |
 | 17700004 | The specified user ID is not found. |
 
 **示例：**
