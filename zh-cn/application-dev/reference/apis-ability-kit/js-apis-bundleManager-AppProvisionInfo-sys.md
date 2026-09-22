@@ -42,7 +42,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | organization<sup>12+</sup> | string | 是   | 否   | 应用的组织信息。 |
 | bundleName<sup>23+</sup> | string | 是   | 是   | 应用的包名。 |
 | appServiceCapabilities | string | 是   | 是   | 应用的服务能力。从API版本26.0.1开始支持。<br/>**模型约束：** 此接口仅可在Stage模型下使用。 |
-| appIndex | ArkTS-Dyn: number<br/>ArkTS-Sta: int | 是   | 是   | 应用的分身索引。从API版本26.0.1开始支持。<br/>**模型约束：** 此接口仅可在Stage模型下使用。|
+| appIndex | number | 是   | 是   | 应用的分身索引。从API版本26.0.1开始支持。<br/>**模型约束：** 此接口仅可在Stage模型下使用。|
 | specifiedDistributionType | string | 是   | 是   | 应用的分发类型。从API版本26.0.1开始支持。<br/>**模型约束：** 此接口仅可在Stage模型下使用。 |
 | additionalInfo | string | 是   | 是   | 应用的附加信息。从API版本26.0.1开始支持。<br/>**模型约束：** 此接口仅可在Stage模型下使用。 |
 

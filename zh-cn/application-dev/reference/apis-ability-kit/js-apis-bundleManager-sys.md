@@ -3967,15 +3967,11 @@ try {
 
 ## bundleManager.getAppProvisionInfoInDevice
 
-ArkTS-Dyn:getAppProvisionInfoInDevice(bundleName: string, userId: number): Promise\<Array\<AppProvisionInfo\>\>
-
-ArkTS-Sta:getAppProvisionInfoInDevice(bundleName: string, userId: int): Promise\<Array\<AppProvisionInfo\>\>
+getAppProvisionInfoInDevice(bundleName: string, userId: number): Promise\<Array\<AppProvisionInfo\>\>
 
 根据bundleName和userId获取应用的[Provision](js-apis-bundleManager-AppProvisionInfo-sys.md)配置文件信息。使用Promise异步回调。
 
-**ArkTS-Dyn起始版本**：26.0.1
- 
-**ArkTS-Sta起始版本**：26.0.1
+**起始版本**：26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -3994,7 +3990,7 @@ ArkTS-Sta:getAppProvisionInfoInDevice(bundleName: string, userId: int): Promise\
 | 参数名   | 类型         | 必填 | 说明          |
 | -------- | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
 | bundleName | string | 是 | 指定的bundleName。 |
-| userId | ArkTS-Dyn: number<br/>ArkTS-Sta: int | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../apis-basic-services-kit/js-apis-osAccount.md#getosaccountlocalid9)获取。<br>取值范围：大于等于0。 |
+| userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../apis-basic-services-kit/js-apis-osAccount.md#getosaccountlocalid9)获取。<br>取值范围：大于等于0。 |
 
 
 **返回值：**
@@ -4109,15 +4105,11 @@ try {
 
 ## bundleManager.getAllAppProvisionInfoInDevice
 
-ArkTS-Dyn:getAllAppProvisionInfoInDevice(userId: number): Promise\<Array\<AppProvisionInfo\>\>
-
-ArkTS-Sta:getAllAppProvisionInfoInDevice(userId: int): Promise\<Array\<AppProvisionInfo\>\>
+getAllAppProvisionInfoInDevice(userId: number): Promise\<Array\<AppProvisionInfo\>\>
 
 根据userId获取指定用户下所有应用的[Provision](js-apis-bundleManager-AppProvisionInfo-sys.md)配置文件信息。使用Promise异步回调。
 
-**ArkTS-Dyn起始版本**：26.0.1
- 
-**ArkTS-Sta起始版本**：26.0.1
+**起始版本**：26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -4135,7 +4127,7 @@ ArkTS-Sta:getAllAppProvisionInfoInDevice(userId: int): Promise\<Array\<AppProvis
 
 | 参数名   | 类型         | 必填 | 说明          |
 | -------- | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
-| userId | ArkTS-Dyn: number<br/>ArkTS-Sta: int | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../apis-basic-services-kit/js-apis-osAccount.md#getosaccountlocalid9)获取。<br>取值范围：大于等于0。 |
+| userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../apis-basic-services-kit/js-apis-osAccount.md#getosaccountlocalid9)获取。<br>取值范围：大于等于0。 |
 
 
 **返回值：**
@@ -4151,7 +4143,7 @@ ArkTS-Sta:getAllAppProvisionInfoInDevice(userId: int): Promise\<Array\<AppProvis
 | 错误码ID | 错误信息                               |
 | -------- | -------------------------------------- |
 | 201 | Permission denied. |
-| 202 | PPermission denied. A non-system application is not allowed to call a system API. |
+| 202 | Permission denied. A non-system application is not allowed to call a system API. |
 | 17700004 | The specified user ID is not found. |
 
 **示例：**
@@ -4649,15 +4641,11 @@ try {
 
 ## bundleManager.setAdditionalInfoByIndex
 
-ArkTS-Dyn:setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, appIndex: number): void
-
-ArkTS-Sta:setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, appIndex: int): void
+setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, appIndex: number): void
 
 设置指定应用的额外信息。此接口仅供应用市场调用。
 
-**ArkTS-Dyn起始版本**：26.0.1
- 
-**ArkTS-Sta起始版本**：26.0.1
+**起始版本**：26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -4673,7 +4661,7 @@ ArkTS-Sta:setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, a
 | --------------------- | ------------------------------- | ---- | -------------------------------------------------- |
 | bundleName            | string                          | 是   | 指定应用的包名。                                    |
 | additionalInfo        | string                          | 是   | 需要设置的应用的额外信息。                           |
-| appIndex              | ArkTS-Dyn: number<br/>ArkTS-Sta: int  | 是   | 指定的应用分身索引。取值范围：0或10000。                  |
+| appIndex              | number  | 是   | 指定的应用分身索引。取值范围：0或10000。                  |
 
 **错误码：**
 
