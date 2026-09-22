@@ -2221,7 +2221,7 @@ createExactTimer(config: ExactTimerConfig): Promise&lt;number&gt;
 >
 > 3.若创建的定时器名称与已存在的定时器名称相同，则先前的同名定时器将被自动停止并销毁，新创建的定时器将被分配新的定时器ID，与被销毁的定时器ID不同。
 >
-> 4.单个设备管理应用最多可创建5个同时生效的定时器，超出上限时报9201053错误码。
+> 4.单个设备管理应用最多可创建5个同时生效的定时器，超出上限时返回9201053错误码。
 
 **起始版本：** 26.0.1
 
@@ -2229,7 +2229,7 @@ createExactTimer(config: ExactTimerConfig): Promise&lt;number&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2292,7 +2292,7 @@ startExactTimer(timer: number, triggerTime: number): Promise&lt;void&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2353,7 +2353,7 @@ stopExactTimer(timer: number): Promise&lt;void&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2409,7 +2409,7 @@ destroyExactTimer(timer: number): Promise&lt;void&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
