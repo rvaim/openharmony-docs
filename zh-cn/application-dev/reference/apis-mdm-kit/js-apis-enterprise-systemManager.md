@@ -2229,7 +2229,7 @@ createExactTimer(config: ExactTimerConfig): Promise&lt;number&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用无效果。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2292,7 +2292,7 @@ startExactTimer(timer: number, triggerTime: number): Promise&lt;void&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用无效果。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2301,7 +2301,7 @@ startExactTimer(timer: number, triggerTime: number): Promise&lt;void&gt;
 | 参数名 | 类型                                                    | 必填 | 说明                   |
 | ------ | ------------------------------------------------------- | ---- | ---------------------- |
 | timer  | number | 是   | 定时器ID，由[systemManager.createExactTimer](#systemmanagercreateexacttimer)接口获取。 |
-| triggerTime  | number | 是   | 定时器触发时间，单位：毫秒。该值为目标触发时刻的系统启动后经过时间，需在当前系统启动后经过的时间基础上加上期望的延迟时长。例如，期望5秒后触发定时器，可通过[systemDateTime.getUptime](../apis-basic-services-kit/js-apis-date-time.md#systemdatetimegetuptime10)（传入[TimeType.STARTUP](../apis-basic-services-kit/js-apis-date-time.md#timetype10)）获取当前系统启动后经过的时间，再加上5000。 |
+| triggerTime  | number | 是   | 定时器触发时间，单位：毫秒。该值为目标触发时刻的系统启动后经过时间，需在当前系统启动后经过的时间基础上加上期望的延迟时长。例如，期望5秒后触发定时器，可通过[systemDateTime.getUptime](../apis-basic-services-kit/js-apis-date-time.md#systemdatetimegetuptime10)（传入[TimeType.STARTUP](../apis-basic-services-kit/js-apis-date-time.md#timetype10)）获取当前系统启动后经过的时间，再加上5s。 |
 
 **返回值：**
 
@@ -2353,7 +2353,7 @@ stopExactTimer(timer: number): Promise&lt;void&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用无效果。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2409,7 +2409,7 @@ destroyExactTimer(timer: number): Promise&lt;void&gt;
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用无效果。
+**设备行为差异：** 该接口在Phone和Tablet中可正常调用，在其他设备中调用返回801错误码。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
