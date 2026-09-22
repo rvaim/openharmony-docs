@@ -3971,7 +3971,7 @@ getAppProvisionInfoInDevice(bundleName: string, userId: number): Promise\<Array\
 
 根据bundleName和userId获取应用的[Provision](js-apis-bundleManager-AppProvisionInfo-sys.md)配置文件信息。使用Promise异步回调。
 
-**起始版本**：26.0.1
+**起始版本：**26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -4109,7 +4109,7 @@ getAllAppProvisionInfoInDevice(userId: number): Promise\<Array\<AppProvisionInfo
 
 根据userId获取指定用户下所有应用的[Provision](js-apis-bundleManager-AppProvisionInfo-sys.md)配置文件信息。使用Promise异步回调。
 
-**起始版本**：26.0.1
+**起始版本：**26.0.1
 
 **系统接口：** 此接口为系统接口。
 
@@ -4645,7 +4645,7 @@ setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, appIndex: n
 
 设置指定应用的额外信息。此接口仅供应用市场调用。
 
-**起始版本**：26.0.1
+**起始版本：**26.0.1
 
 **系统接口：** 此接口为系统接口。
 
