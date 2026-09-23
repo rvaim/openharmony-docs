@@ -10,18 +10,16 @@
 - [申请相机开发的权限](camera-preparation.md)
 - 相机应用开发(ArkTS)<!--camera-dev-arkts-->
   - 配置相机设备与输入(ArkTS)<!--camera-dev-arkts-mandatory-->
-    - [管理相机设备(ArkTS)](camera-device-management.md)
-    - [配置摄像头输入(ArkTS)](camera-device-input.md)
-    - [管理相机会话(ArkTS)](camera-session-management.md)
+    - [相机管理(ArkTS)](camera-device-management.md)
+    - [设备输入(ArkTS)](camera-device-input.md)
+    - [会话管理(ArkTS)](camera-session-management.md)
   - 拍照与预览(ArkTS)<!--camera-dev-arkts-preview-->
     - [通过系统相机拍照和录像(CameraPicker)](camera-picker.md)
     - [预览(ArkTS)](camera-preview.md)
     - [双路预览(ArkTS)](camera-dual-channel-preview.md)
     - [拍照(ArkTS)](camera-shooting.md)
     - [分段式拍照(ArkTS)](camera-deferred-capture.md)
-    - [YUV拍照(ArkTS)](camera-yuv-shooting.md)
-    - [对焦(ArkTS)](camera-focus.md)
-    - [安全相机(ArkTS)](camera-secure-photo.md)
+    - [YUV拍照(ArkTS)](camera-yuv-shooting.md)<!--PR1--><!--PR1End-->
     - [相机基础动效(ArkTS)](camera-animation.md)
     - [元数据(ArkTS)](camera-metadata.md)
     <!--Del-->
@@ -31,24 +29,19 @@
     <!--DelEnd-->
   - 录像与创意拍摄(ArkTS)<!--camera-dev-arkts-recording-->
     - [录像(ArkTS)](camera-recording.md)
-    - [动态照片拍摄(ArkTS)](camera-moving-photo.md)
-    - [HDR Vivid相机拍照(ArkTS)](camera-hdr-shooting.md)
-    - [HDR Vivid相机录像(ArkTS)](camera-hdr-recording.md)
+    - [动态照片拍摄(ArkTS)](camera-moving-photo.md)<!--PR5--><!--PR5End-->
     - [相机控制器(ArkTS)](camera-control-center.md)
   - 相机参数设置(ArkTS)<!--camera-dev-arkts-params-->
     - [相机参数设置(ArkTS)](camera-torch-use.md)
-    - [微距能力设置(ArkTS)](camera-macro.md)
-    - [使用相机预配置(ArkTS)](camera-preconfig.md)
-  - 相机性能优化(ArkTS)<!--camera-dev-arkts-perf-->
-    - [动态调整预览帧率(ArkTS)](camera-framerate.md)
+    - [微距能力设置(ArkTS)](camera-macro.md)<!--PR4--><!--PR4End-->
+  - 相机性能优化(ArkTS)<!--camera-dev-arkts-perf--><!--PR3--><!--PR3End-->
     - [压力管控(ArkTS)](camera-system-pressure.md)
     - [在Worker线程中使用相机(ArkTS)](camera-worker.md)
     <!--Del-->
     - [性能提升实践(仅对系统应用开放)(ArkTS)](camera-performance-improvement-sys.md)
     <!--DelEnd-->
   - 相机状态变化处理(ArkTS)<!--camera-dev-arkts-state-->
-    - [处理折叠状态摄像头变更(ArkTS)](camera-foldable-display.md)
-    - [相机旋转(ArkTS)](camera-rotation.md)
+    - [处理折叠状态摄像头变更(ArkTS)](camera-foldable-display.md)<!--PR2--><!--PR2End-->
     - [相机启动恢复(ArkTS)](camera-background-recovery.md)
     - [自动切换摄像头(ArkTS)](camera-auto-switch.md)
     - [多摄同开(ArkTS)](camera-concurrent-open.md)
@@ -62,18 +55,15 @@
     - [预览流二次处理(C/C++)](native-camera-preview-imageReceiver.md)
     - [拍照(C/C++)](native-camera-shooting.md)
     - [分段式拍照(C/C++)](native-camera-deferred-capture.md)
-    - [YUV拍照(C/C++)](native-camera-yuv-shooting.md)
-    - [对焦(C/C++)](camera-focus-native.md)
+    - [YUV拍照(C/C++)](native-camera-yuv-shooting.md)<!--PR7--><!--PR7End-->
     - [元数据(C/C++)](native-camera-metadata.md)
   - [录像(C/C++)](native-camera-recording.md)
   - 相机参数设置(C/C++)<!--camera-dev-native-params-->
     - [手电筒使用(C/C++)](native-camera-torch-use.md)
-    - [微距能力设置(C/C++)](native-camera-macro.md)
-    - [使用相机预配置(C/C++)](camera-preconfig-native.md)
-  - 相机性能优化(C/C++)<!--camera-dev-native-perf-->
+    - [微距能力设置(C/C++)](native-camera-macro.md)<!--PR10--><!--PR10End-->
+  - 相机性能优化(C/C++)<!--camera-dev-native-perf--><!--PR9--><!--PR9End-->
     - [动态调整预览帧率(C/C++)](camera-setframerate-native.md)
-  - 相机状态变化处理(C/C++)<!--camera-dev-native-state-->
-    - [相机旋转(C/C++)](camera-rotation-native.md)
+  - 相机状态变化处理(C/C++)<!--camera-dev-native-state--><!--PR8--><!--PR8End-->
     - [多摄同开(C/C++)](native-camera-concurrent-open.md)
 - Camera Kit常见问题<!--camera-dev-faq-->
   - 相机无法启动<!--camera-dev-faq-start-->
@@ -81,5 +71,4 @@
     - [相机预览流启动问题](camera-previewoutput-faq.md)
     - [会话配置问题](camera-sessionconfig-faq.md)
   - [相机预览画面旋转异常问题](camera-rotation-faq.md)
-  - [白平衡相关问题](camera-whitebalance-faq.md)
-  - [相机预览花屏解决方案](camera-preview-glitch-solution.md)
+  - [白平衡相关问题](camera-whitebalance-faq.md)<!--PR6--><!--PR6End-->
