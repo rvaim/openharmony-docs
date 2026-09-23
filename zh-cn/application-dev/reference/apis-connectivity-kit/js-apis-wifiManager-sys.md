@@ -1687,10 +1687,10 @@ let recvStreamChangeFunc = (result:number) => {
     console.info("Receive stream change event: " + result);
 }
 
-// Register event
+// 注册事件
 wifiManager.on("streamChange", recvStreamChangeFunc);
 
-// Unregister event
+// 注销事件
 wifiManager.off("streamChange", recvStreamChangeFunc);
 
 ```
@@ -1765,10 +1765,10 @@ let recvDeviceConfigChangeFunc = (result:number) => {
     console.info("Receive device config change event: " + result);
 }
 
-// Register event
+// 注册事件
 wifiManager.on("deviceConfigChange", recvDeviceConfigChangeFunc);
 
-// Unregister event
+// 注销事件
 wifiManager.off("deviceConfigChange", recvDeviceConfigChangeFunc);
 
 ```
@@ -1843,10 +1843,10 @@ let recvHotspotStaJoinFunc = (result:wifiManager.StationInfo) => {
     console.info("Receive hotspot sta join event: " + result);
 }
 
-// Register event
+// 注册事件
 wifiManager.on("hotspotStaJoin", recvHotspotStaJoinFunc);
 
-// Unregister event
+// 注销事件
 wifiManager.off("hotspotStaJoin", recvHotspotStaJoinFunc);
 
 ```
@@ -1921,10 +1921,10 @@ let recvHotspotStaLeaveFunc = (result:wifiManager.StationInfo) => {
     console.info("Receive hotspot sta leave event: " + result);
 }
 
-// Register event
+// 注册事件
 wifiManager.on("hotspotStaLeave", recvHotspotStaLeaveFunc);
 
-// Unregister event
+// 注销事件
 wifiManager.off("hotspotStaLeave", recvHotspotStaLeaveFunc);
 
 ```
