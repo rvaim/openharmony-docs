@@ -162,8 +162,8 @@ Wi-Fi配置信息。
 | configStatus<sup>12+</sup> | number | 否 | 是 | 返回当前网络是否允许参与选网。 <br />  0 - 允许参与选网，1 - 禁止参与 <br /> 2 - 永久禁止参与，3 - 未知 <br /> **系统接口：** 此接口为系统接口。|
 | isAutoConnectAllowed<sup>17+</sup> | boolean | 否 | 是 | 是否允许自动连接。false:不允许，true:允许自动连接。<br /> **系统接口：** 此接口为系统接口。|
 | isSecureWifi<sup>20+</sup> | boolean | 否 | 是 | 安全Wi-Fi检测。false:不是安全Wi-Fi，true:是安全Wi-Fi。<br /> **系统接口：** 此接口为系统接口。|
-| family<sup>20+</sup> | number | 否 | 是 | 静态IP家族：0表示IPV4，1表示IPV6。 <br /> **系统接口：** 此接口为系统接口。 |
-| staticIpv6<sup>20+</sup> | Ipv6Config | 否 | 是 | 静态IPV6配置。<br /> **系统接口：** 此接口为系统接口。 |
+| family<sup>20+</sup> | number | 否 | 是 | 静态IP家族：0表示IPv4，1表示IPv6。 <br /> **系统接口：** 此接口为系统接口。 |
+| staticIpv6<sup>20+</sup> | Ipv6Config | 否 | 是 | 静态IPv6配置。<br /> **系统接口：** 此接口为系统接口。 |
 
 ## IpType
 
