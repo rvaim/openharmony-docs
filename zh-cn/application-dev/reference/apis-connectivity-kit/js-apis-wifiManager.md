@@ -3696,7 +3696,7 @@ addDnsSdLocalP2pService(instanceName: string, serviceType: string, txtRecord: Ma
 | -------- | -------- |
 | 201 | Permission denied. |
 | 801 | Capability not supported. |
-| 2801000 | The Wi-Fi service is not started properly, or there is an Wi-Fi service error. |
+| 2801000 | Operation failed. |
 | 2801001 | Wi-Fi STA disabled. |
 
 **示例：**
