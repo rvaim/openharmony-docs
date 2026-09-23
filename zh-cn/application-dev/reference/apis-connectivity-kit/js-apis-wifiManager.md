@@ -2921,10 +2921,10 @@ off(type: 'wifiConnectionChange', callback?: Callback&lt;number&gt;): void
       console.info("Receive wifi connection change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("wifiConnectionChange", recvWifiConnectionChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
 ```
 
@@ -3003,10 +3003,10 @@ off(type: 'wifiScanStateChange', callback?: Callback&lt;number&gt;): void
       console.info("Receive Wifi scan state change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("wifiScanStateChange", recvWifiScanStateChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
 ```
 
@@ -3074,10 +3074,10 @@ off(type: 'wifiRssiChange', callback?: Callback&lt;number&gt;): void
       console.info("Receive wifi rssi change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("wifiRssiChange", recvWifiRssiChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("wifiRssiChange", recvWifiRssiChangeFunc);
 ```
  
@@ -3154,10 +3154,10 @@ off(type: 'hotspotStateChange', callback?: Callback&lt;number&gt;): void
       console.info("Receive hotspot state change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("hotspotStateChange", recvHotspotStateChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("hotspotStateChange", recvHotspotStateChangeFunc);
 ```
 
@@ -3236,10 +3236,10 @@ off(type: 'p2pStateChange', callback?: Callback&lt;number&gt;): void
       console.info("Receive p2p state change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pStateChange", recvP2pStateChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pStateChange", recvP2pStateChangeFunc);
 ```
 
@@ -3307,10 +3307,10 @@ off(type: 'p2pConnectionChange', callback?: Callback&lt;WifiP2pLinkedInfo&gt;): 
       console.info("Receive p2p connection change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pConnectionChange", recvP2pConnectionChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pConnectionChange", recvP2pConnectionChangeFunc);
 ```
 
@@ -3378,10 +3378,10 @@ off(type: 'p2pDeviceChange', callback?: Callback&lt;WifiP2pDevice&gt;): void
       console.info("Receive p2p device change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pDeviceChange", recvP2pDeviceChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pDeviceChange", recvP2pDeviceChangeFunc);
 ```
 
@@ -3449,10 +3449,10 @@ off(type: 'p2pPeerDeviceChange', callback?: Callback&lt;WifiP2pDevice[]&gt;): vo
       console.info("Receive p2p peer device change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
 ```
 
@@ -3520,10 +3520,10 @@ off(type: 'p2pPersistentGroupChange', callback?: Callback&lt;void&gt;): void
       console.info("Receive p2p persistent group change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
 ```
 
@@ -3598,10 +3598,10 @@ off(type: 'p2pDiscoveryChange', callback?: Callback&lt;number&gt;): void
       console.info("Receive p2p discovery change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
 ```
 
@@ -3613,7 +3613,7 @@ isWlanSupported(): boolean
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3637,7 +3637,7 @@ isWlanSupported(): boolean
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3655,7 +3655,7 @@ isWlanSupported(): boolean
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3675,7 +3675,7 @@ addDnsSdLocalP2pService(instanceName: string, serviceType: string, txtRecord: Ma
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3722,7 +3722,7 @@ addUpnpLocalP2pService(uuid: string, device: string, services: Array&lt;string&g
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3770,7 +3770,7 @@ removeLocalP2pService(srvInfo: WifiP2pServiceInfo): void
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3817,7 +3817,7 @@ getLocalP2pServices(): Promise&lt;Array&lt;WifiP2pServiceInfo&gt;&gt;
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
