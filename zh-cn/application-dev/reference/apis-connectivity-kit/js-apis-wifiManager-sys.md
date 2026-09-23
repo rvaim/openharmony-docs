@@ -340,7 +340,7 @@ connectToDevice(config: WifiDeviceConfig): void
 | snr | number | 否 | 否 | 信噪比，单位：dB。 <br /> **系统接口：** 此接口为系统接口。 |
 | suppState | [SuppState](#suppstate) | 否 | 否 | 请求状态。 <br /> **系统接口：** 此接口为系统接口。 |
 | isHiLinkProNetwork<sup>20+</sup> | boolean | 否 | 是 | 是否是HiLinkPro网络。true表示是HiLinkPro网络，false表示不是HiLinkPro网络。<br /> **系统接口：** 此接口为系统接口。 |
-| wifiTxRxValid | boolean | 否 | 是 | **起始版本：** 26.0.0。用于指示Wi-Fi的发送（Tx, Transmitting）和接收（Rx, Receiving）功能是否都在正常工作,true表示正常，false表示异常。<br /> **系统接口：** 此接口为系统接口。 |
+| wifiTxRxValid | boolean | 否 | 是 | **起始版本：** 26.0.0。用于指示Wi-Fi的发送（Tx, Transmitting）和接收（Rx, Receiving）功能是否都在正常工作，true表示正常，false表示异常。<br /> **系统接口：** 此接口为系统接口。 |
 
 ## SuppState
 
