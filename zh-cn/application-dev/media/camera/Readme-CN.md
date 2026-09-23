@@ -19,7 +19,7 @@
     - [双路预览(ArkTS)](camera-dual-channel-preview.md)
     - [拍照(ArkTS)](camera-shooting.md)
     - [分段式拍照(ArkTS)](camera-deferred-capture.md)
-    - [YUV拍照(ArkTS)](camera-yuv-shooting.md)<!--PR1--><!--PR1End-->
+    - [YUV拍照(ArkTS)](camera-yuv-shooting.md)<!--RP1--><!--RP1End-->
     - [相机基础动效(ArkTS)](camera-animation.md)
     - [元数据(ArkTS)](camera-metadata.md)
     <!--Del-->
@@ -29,19 +29,19 @@
     <!--DelEnd-->
   - 录像与创意拍摄(ArkTS)<!--camera-dev-arkts-recording-->
     - [录像(ArkTS)](camera-recording.md)
-    - [动态照片拍摄(ArkTS)](camera-moving-photo.md)<!--PR5--><!--PR5End-->
+    - [动态照片拍摄(ArkTS)](camera-moving-photo.md)<!--RP5--><!--RP5End-->
     - [相机控制器(ArkTS)](camera-control-center.md)
   - 相机参数设置(ArkTS)<!--camera-dev-arkts-params-->
     - [相机参数设置(ArkTS)](camera-torch-use.md)
-    - [微距能力设置(ArkTS)](camera-macro.md)<!--PR4--><!--PR4End-->
-  - 相机性能优化(ArkTS)<!--camera-dev-arkts-perf--><!--PR3--><!--PR3End-->
+    - [微距能力设置(ArkTS)](camera-macro.md)<!--RP4--><!--RP4End-->
+  - 相机性能优化(ArkTS)<!--camera-dev-arkts-perf--><!--RP3--><!--RP3End-->
     - [压力管控(ArkTS)](camera-system-pressure.md)
     - [在Worker线程中使用相机(ArkTS)](camera-worker.md)
     <!--Del-->
     - [性能提升实践(仅对系统应用开放)(ArkTS)](camera-performance-improvement-sys.md)
     <!--DelEnd-->
   - 相机状态变化处理(ArkTS)<!--camera-dev-arkts-state-->
-    - [处理折叠状态摄像头变更(ArkTS)](camera-foldable-display.md)<!--PR2--><!--PR2End-->
+    - [处理折叠状态摄像头变更(ArkTS)](camera-foldable-display.md)<!--RP2--><!--RP2End-->
     - [相机启动恢复(ArkTS)](camera-background-recovery.md)
     - [自动切换摄像头(ArkTS)](camera-auto-switch.md)
     - [多摄同开(ArkTS)](camera-concurrent-open.md)
@@ -55,15 +55,14 @@
     - [预览流二次处理(C/C++)](native-camera-preview-imageReceiver.md)
     - [拍照(C/C++)](native-camera-shooting.md)
     - [分段式拍照(C/C++)](native-camera-deferred-capture.md)
-    - [YUV拍照(C/C++)](native-camera-yuv-shooting.md)<!--PR7--><!--PR7End-->
+    - [YUV拍照(C/C++)](native-camera-yuv-shooting.md)<!--RP7--><!--RP7End-->
     - [元数据(C/C++)](native-camera-metadata.md)
   - [录像(C/C++)](native-camera-recording.md)
   - 相机参数设置(C/C++)<!--camera-dev-native-params-->
     - [手电筒使用(C/C++)](native-camera-torch-use.md)
-    - [微距能力设置(C/C++)](native-camera-macro.md)<!--PR10--><!--PR10End-->
-  - 相机性能优化(C/C++)<!--camera-dev-native-perf--><!--PR9--><!--PR9End-->
-    - [动态调整预览帧率(C/C++)](camera-setframerate-native.md)
-  - 相机状态变化处理(C/C++)<!--camera-dev-native-state--><!--PR8--><!--PR8End-->
+    - [微距能力设置(C/C++)](native-camera-macro.md)<!--RP10--><!--RP10End-->
+  - 相机性能优化(C/C++)<!--camera-dev-native-perf--><!--RP9--><!--RP9End-->
+  - 相机状态变化处理(C/C++)<!--camera-dev-native-state--><!--RP8--><!--RP8End-->
     - [多摄同开(C/C++)](native-camera-concurrent-open.md)
 - Camera Kit常见问题<!--camera-dev-faq-->
   - 相机无法启动<!--camera-dev-faq-start-->
@@ -71,4 +70,4 @@
     - [相机预览流启动问题](camera-previewoutput-faq.md)
     - [会话配置问题](camera-sessionconfig-faq.md)
   - [相机预览画面旋转异常问题](camera-rotation-faq.md)
-  - [白平衡相关问题](camera-whitebalance-faq.md)<!--PR6--><!--PR6End-->
+  - [白平衡相关问题](camera-whitebalance-faq.md)<!--RP6--><!--RP6End-->
