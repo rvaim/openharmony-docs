@@ -148,7 +148,7 @@ target_link_libraries(entry PUBLIC libhilog_ndk.z.so libimage_source.so libimage
        char strFormat[MAX_FORMAT_LENGTH] = {0};
        size_t strFormatSize = 0;
        if (napi_get_value_string_utf8(env, args[0], strFormat, sizeof(strFormat), &strFormatSize) != napi_ok) {
-       OH_LOG_ERROR(LOG_APP, "PackToDataFromPicture napi_get_value_string_utf8 failed!");
+           OH_LOG_ERROR(LOG_APP, "PackToDataFromPicture napi_get_value_string_utf8 failed!");
            delete[] outData;
            return GetJsResult(env, IMAGE_BAD_PARAMETER);
        }
@@ -191,7 +191,7 @@ target_link_libraries(entry PUBLIC libhilog_ndk.z.so libimage_source.so libimage
        size_t argc = 2;
        napi_value args[2] = {nullptr};
        if (napi_get_cb_info(env, info, &argc, args, nullptr, nullptr) != napi_ok) {
-           OH_LOG_ERROR(LOG_APP, "napi_get_cb_info failed!");
+       OH_LOG_ERROR(LOG_APP, "napi_get_cb_info failed!");
            return GetJsResult(env, g_thisPicture->errorCode);
        }
        uint32_t fd = 0;
