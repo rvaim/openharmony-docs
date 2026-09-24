@@ -101,7 +101,7 @@
        return imageMetadata;
      } catch (error) {
        console.error(`ReadImageMetadataByType failed, error.code: ${error.code},
-                  error.message: ${error.message}`)
+                  error.message: ${error.message}`);
        return undefined;
      }
    }
