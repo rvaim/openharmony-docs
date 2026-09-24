@@ -7382,6 +7382,10 @@ minimize(callback: AsyncCallback&lt;void&gt;): void
 
 该接口仅支持主窗口、子窗口或全局悬浮窗，其他窗口调用返回1300002错误码，使用callback异步回调。
 
+> **说明：**
+>
+> - 调用创建窗口API后，若未使用[showWindow()](#showwindow9)显示窗口，调用此接口不生效。
+
 **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -7428,6 +7432,10 @@ minimize(): Promise&lt;void&gt;
 - 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，可以使用[showWindow()](#showwindow9)进行还原。
 
 该接口仅支持主窗口、子窗口或全局悬浮窗，其他窗口调用返回1300002错误码，使用Promise异步回调。
+
+> **说明：**
+>
+> - 调用创建窗口API后，若未使用[showWindow()](#showwindow9)显示窗口，调用此接口不生效。
 
 **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。
 
