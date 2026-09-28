@@ -7384,7 +7384,7 @@ minimize(callback: AsyncCallback&lt;void&gt;): void
 
 > **说明：**
 >
-> - 调用创建窗口API后，若未使用[showWindow()](#showwindow9)显示窗口，调用此接口不生效。
+> - 该接口调用前，建议保证窗口已创建且处于显示状态，否则调用不生效不报错。
 
 **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。
 
@@ -7435,7 +7435,7 @@ minimize(): Promise&lt;void&gt;
 
 > **说明：**
 >
-> - 调用创建窗口API后，若未使用[showWindow()](#showwindow9)显示窗口，调用此接口不生效。
+> - 该接口调用前，建议保证窗口已创建且处于显示状态，否则调用不生效不报错。
 
 **原子化服务API：** 从API version 12开始，该接口支持在原子化服务中使用。
 
