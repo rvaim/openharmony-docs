@@ -40,7 +40,7 @@ startWork(work: WorkInfo): void
 
 | 错误码ID  | 错误信息             |
 | ---- | --------------------- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | [Sync] Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | 9700001 | Memory operation failed. |
 | 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
 | 9700003 | System service operation failed. |
