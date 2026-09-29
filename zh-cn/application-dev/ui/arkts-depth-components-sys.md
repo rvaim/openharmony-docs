@@ -6,7 +6,7 @@
 <!--Tester: @lxl007-->
 <!--Adviser: @Brilliantry_Rui-->
 
-[DepthComponent](../reference/apis-arkui/arkui-ts/ts-basic-components-depthcomponent-sys.md)是一个景深组件，能够利用一张背景图和一张深度图（或自带深度信息的3D模型），把原本平面的内容渲染出立体的空间纵深感，可以简单理解为给平面背景加上“裸眼3D”效果。背景中各像素点依据深度图呈现距离相机远近不同的层次感；子组件（如文字、图标）可以借助空间效果融入这个立体场景，实现被背景物体遮挡、视觉倾斜等真实的空间交互。
+[DepthComponent](../reference/apis-arkui/arkui-ts/ts-basic-components-depthcomponent-sys.md)是一个景深组件，能够利用一张背景图和一张深度图（或自带深度信息的3D模型），把原本平面的内容渲染出立体的空间纵深感，可以简单理解为给平面背景加上“裸眼3D”效果。背景中各像素点依据深度图呈现距离相机远近不同的层次感；子组件（如文字、图标）可以借助空间效果融入这个立体场景，实现被背景物体遮挡、视觉倾斜等真实的空间交互。该组件从API版本26.0.0开始支持。
 
 景深组件常用于壁纸、桌面、锁屏等需要营造立体纵深感与空间沉浸感的场景。
 
@@ -108,7 +108,7 @@ DepthComponent通过背景资源与深度图重建三维场景，并借助透视
 
 ![相机移轴裁剪示意图](figures/DepthComponent-cameraBufferCrop-params.png)
 
-经过场景重建与相机设置后，背景与子组件统一经过相同的三维变换管线，相机依据position与quaternion将世界坐标变换到观察空间（“相机眼中的世界”），再结合yFov、zNear、zFar与组件宽高比进行透视投影、变换到裁剪空间，经透视除法得到归一化设备坐标（Normalized Device Coordinates，NDC），最后通过视口变换映射到屏幕像素坐标，过程如下：
+经过场景重建与相机设置后，背景与子组件统一经过相同的三维变换管线。相机依据position与quaternion将世界坐标变换到观察空间（“相机眼中的世界”）。再结合yFov、zNear、zFar与组件宽高比进行透视投影，变换到裁剪空间。经透视除法得到归一化设备坐标（Normalized Device Coordinates，NDC），最后通过视口变换映射到屏幕像素坐标，过程如下：
 
 ![三维变换管线](figures/DepthComponent-coord-transform.png)
 
@@ -187,7 +187,7 @@ positionMode决定四角坐标使用的坐标系（详见[SpatialPositionMode](.
 
 3. 背景为静态图片时需要设置深度图，且深度图需要与背景图的分辨率保持一致；背景为3D模型时无需设置深度图。
 
-4. 以图片作为背景时，相机参数更新不会引起背景的变化，仅影响子组件的空间渲染效果。
+4. 以图片作为背景时，相机参数更新不会引起背景的变化，仅影响子组件的空间渲染效果。从不同位置、角度与视野观察已建好的场景时，子组件的投影大小、屏幕位置与可见区域随之改变。
 
    原因是：静态图片是一张已经拍摄完成的固定平面画面，没有真实立体结构。例如，当观察者左右移动头部时，墙上的一幅照片依旧是那幅照片，相机怎么调整它都不变。而子组件是在三维空间中独立渲染的立体元素，相机动了相当于"换个角度观察它们"，其投影大小、屏幕位置与遮挡关系都会随之改变，从而呈现立体感。对比之下，3D模型背景本身也是真实立体结构，相机会同时影响背景与子组件；若希望背景也随相机移动产生空间变化，应改用3D模型背景。
 
@@ -203,7 +203,7 @@ positionMode决定四角坐标使用的坐标系（详见[SpatialPositionMode](.
 
 - 景深强度宜克制：纵深感并非越强越好。过大的视场角（yFov）、过近的相机距离或过强的空间位移，会让背景过度拉伸、子组件位移幅度过大，反而破坏画面协调并加剧不适感。建议从温和的参数起步，优先保证内容的可读性与画面稳定。
 
-- 兼顾渲染性能：景深渲染依赖GPU（图形处理器）对背景每个像素进行深度重建与投影计算，属于GPU密集型操作。深度图分辨率应与背景图保持一致，避免不必要的过大分辨率增加显存与算力开销；在动态调整相机或空间位置时，注意控制更新频率，避免每帧高频变更带来的性能压力。
+- 兼顾渲染性能：景深渲染依赖GPU（Graphics Processing Unit，图形处理器）对背景每个像素进行深度重建与投影计算，属于GPU密集型操作。深度图分辨率应与背景图保持一致，避免不必要的过大分辨率增加显存与算力开销；在动态调整相机或空间位置时，注意控制更新频率，避免每帧高频变更带来的性能压力。
 
 ## 场景示例
 
@@ -517,7 +517,7 @@ struct DepthComponent3DExample {
 
 打开应用页面，DepthComponent加载3D模型成功后，文字“Depth Component”呈现视觉倾斜效果，且部分内容被模型遮挡。
 
-   ![2D背景下的文字倾斜与遮挡效果](../reference/apis-arkui/arkui-ts/figures/DepthComponent-3D.png)
+   ![3D背景下的文字倾斜与遮挡效果](../reference/apis-arkui/arkui-ts/figures/DepthComponent-3D.png)
 
 ### 仅设置深度实现文字遮挡效果
 
@@ -601,7 +601,7 @@ struct DepthComponentDepthExample {
 // 为子组件设置空间效果：X、Y为归一化设备坐标、直接映射屏幕，
 // 四角XY设置为上窄下宽的梯形，Z统一控制深度
 Text('NDC Mode')
-  .fontSize(80)
+  .fontSize(120)
   .fontColor(Color.White)
   .spatialEffect({
     position: {
@@ -661,9 +661,9 @@ struct DepthComponentNdcExample {
 
 **预期效果**
 
-打开应用页面，文字“NDC Mode”在屏幕上呈现上窄下宽（上小下大）的倾斜形态：四角X、Y直接映射到屏幕，顶边宽度（x从-0.2到0.2）约为底边宽度（x从-0.5到0.5）的40%；本例未设置遮挡权重，文字不会被背景物体遮挡。
+打开应用页面，文字“NDC Mode”在屏幕上呈现上窄下宽（上小下大）的倾斜形态：四角X、Y直接映射到屏幕，顶边宽度（x从-0.2到0.2）约为底边宽度（x从-0.5到0.5）的40%；本例遮挡权重设为0.5，文字的相应部分会被背景中距相机更近的物体遮挡。
 
-   ![仅设置深度的文字遮挡效果](../reference/apis-arkui/arkui-ts/figures/DepthComponent-NDC.png)
+   ![NDC坐标实现的文字倾斜效果](../reference/apis-arkui/arkui-ts/figures/DepthComponent-NDC.png)
 
 
 ### 使用移轴裁剪渲染背景局部
