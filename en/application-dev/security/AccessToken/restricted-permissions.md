@@ -1718,7 +1718,7 @@ Allows an application to enter exam mode. The system service will display a dial
 
 **Supported devices**: phones | PCs/2-in-1 devices | tablets
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
 ## ohos.permission.SYNC_ROOT_MANAGER
 
