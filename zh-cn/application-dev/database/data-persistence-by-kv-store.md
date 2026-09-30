@@ -40,34 +40,10 @@
 
 ## 开发步骤
 
-1. 若要使用键值型数据库，首先要使用createKVManager()方法获取一个KVManager实例，用于管理数据库对象。示例代码如下所示：
+1. 若要使用键值型数据库，首先要使用createKVManager()方法获取一个KVManager实例，用于管理数据库对象。此处context获取以Stage模型为例，FA模型context的获取请见[context](../application-models/application-context-fa.md)，示例代码如下所示：
 
-   ```ts
-   // 导入模块
-   // 在pages目录下新建KvStoreInterface.ets
-   import { distributedKVStore } from '@kit.ArkData';
-   import { BusinessError } from '@kit.BasicServicesKit';
-   import EntryAbility from '../entryability/EntryAbility';
-   // Logger为hilog封装后实现的打印功能
-   import Logger from '../common/Logger';
-
-   let kvManager: distributedKVStore.KVManager | undefined = undefined;
-   let kvStore: distributedKVStore.SingleKVStore | undefined = undefined;
-   let appId: string = 'com.example.kvstoresamples';
-   let storeId: string = 'storeId';
-   // Stage模型context从EntryAbility.ets中获取
-   const context = EntryAbility.getContext();
-
-   // FA模型获取context
-   import { featureAbility } from '@kit.AbilityKit';
-   import { BusinessError } from '@kit.BasicServicesKit';
-
-   let context = featureAbility.getContext();
-
-   // 下面所有接口的代码都实现在KvInterface中
-   export class KvInterface {
-   }
-   ```
+   <!-- @[get_context](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/KvStoreSamples/entry/src/main/ets/pages/KvStoreInterface.ets) -->
+  
    <!-- @[kv_store1](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/KvStoreSamples/entry/src/main/ets/pages/KvStoreInterface.ets) -->
    
    ``` TypeScript
