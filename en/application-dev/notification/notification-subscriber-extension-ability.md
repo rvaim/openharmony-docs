@@ -1,4 +1,4 @@
-#  Introduction to NotificationSubscriberExtensionAbility
+# Introduction to NotificationSubscriberExtensionAbility
 <!--Kit: Notification Kit-->
 <!--Subsystem: Notification-->
 <!--Owner: @HuYueRong-->

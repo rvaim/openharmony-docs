@@ -31,7 +31,7 @@
   <!--DelEnd-->
   - [Clearing Repeated Notifications Across Devices](notification-distributed-messageid.md)
 - ExtensionAbility for Notification Subscription<!--notification-subscriber-extension-->
-  - [ExtensionAbility Overview for Notification Subscription](notification-subscriber-extension-ability.md)
+  - [Introduction to NotificationSubscriberExtensionAbility](notification-subscriber-extension-ability.md)
   - [Developing the ExtensionAbility for Notification Subscription](notification-subscriber-extension-ability-development-steps.md)
 - [Glossary](notification-glossary.md)
 <!--RP1--><!--RP1End-->
