@@ -43,6 +43,20 @@
 1. 若要使用键值型数据库，首先要使用createKVManager()方法获取一个KVManager实例，用于管理数据库对象。此处context获取以Stage模型为例，FA模型context的获取请见[context](../application-models/application-context-fa.md)，示例代码如下所示：
 
    <!-- @[get_context](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/KvStoreSamples/entry/src/main/ets/pages/KvStoreInterface.ets) -->
+   
+   ``` TypeScript
+   import { distributedKVStore } from '@kit.ArkData';
+   import { BusinessError } from '@kit.BasicServicesKit';
+   import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+   import EntryAbility from '../entryability/EntryAbility';
+   import Logger from '../common/Logger';
+   
+   let kvManager: distributedKVStore.KVManager | undefined = undefined;
+   let kvStore: distributedKVStore.SingleKVStore | undefined = undefined;
+   let appId: string = 'com.example.kvstoresamples';
+   let storeId: string = 'storeId';
+   const context = EntryAbility.getContext();
+   ```
   
    <!-- @[kv_store1](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/KvStoreSamples/entry/src/main/ets/pages/KvStoreInterface.ets) -->
    
