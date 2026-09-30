@@ -1716,7 +1716,7 @@ USB串口DDK API可用于开发以下类型的外设扩展驱动：
 
 ## ohos.permission.SYNC_ROOT_MANAGER
 
-允许应用对云盘同步根进行管理，包括添加同步根到侧边栏以及自定义同步根文件夹图标。
+允许应用管理云盘同步文件夹。
 
 **权限级别**：system_basic
 

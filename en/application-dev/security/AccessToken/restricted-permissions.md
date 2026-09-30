@@ -1722,7 +1722,7 @@ Allows an application to enter exam mode. The system service will display a dial
 
 ## ohos.permission.SYNC_ROOT_MANAGER
 
-Allows apps to manage cloud drive sync roots, including adding sync roots to the sidebar and customizing sync root folder icons.
+Allows an application to manage cloud drive sync folders.
 
 **Permission level**: system_basic
 
