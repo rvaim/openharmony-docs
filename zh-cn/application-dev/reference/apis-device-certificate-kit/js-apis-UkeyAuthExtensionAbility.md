@@ -11,11 +11,7 @@ UkeyAuthExtensionAbility是用于UKey认证UI显示的ExtensionAbility组件，�
 
 与[UIExtensionAbility](../apis-ability-kit/js-apis-app-ability-uiExtensionAbility.md)不同，UkeyAuthExtensionAbility不提供onForeground和onBackground生命周期回调。仅被授予ohos.permission.START_SYSTEM_DIALOG权限的应用可以启动它。
 
-> **说明：**
->
-> 本模块首批接口从API version 26.0.1开始支持。
->
-> 本模块接口仅可在Stage模型下使用。
+**起始版本：** 26.0.1
 
 ## 导入模块
 
