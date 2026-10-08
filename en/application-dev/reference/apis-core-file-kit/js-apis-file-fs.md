@@ -2391,7 +2391,7 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 | Name| Type| Mandatory| Description|
 | ---- | ---- | ---- | ---- |
 | filePath | string | Yes| Application sandbox path of the file.|
-| options | [Options](#options11) | No| Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported.|
+| options | [Options](#options11) | No| Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.|
 
 **Return value**
 
@@ -2471,7 +2471,7 @@ Reads a file text line by line. Read options can be configured. Only the files i
 | Name| Type| Mandatory| Description|
 | ---- | ---- | ---- | ---- |
 | filePath | string | Yes| Application sandbox path of the file.|
-| options | [Options](#options11) | Yes| Read options. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported.|
+| options | [Options](#options11) | Yes| Read options. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.|
 | callback | AsyncCallback&lt;[ReaderIterator](#readeriterator11)&gt; | Yes| Callback used to return a **ReaderIterator** object.|
 
 **Error codes**
@@ -2512,7 +2512,7 @@ Reads a file text line by line synchronously. Only the files in UTF-8 format are
 | Name| Type| Mandatory| Description|
 | ---- | ---- | ---- | ---- |
 | filePath | string | Yes| Application sandbox path of the file.|
-| options | [Options](#options11) | No| Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported.|
+| options | [Options](#options11) | No| Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.|
 
 **Return value**
 
@@ -4053,6 +4053,8 @@ Moves a file to the destination path. This API returns the result synchronously.
 > This API is not supported in a distributed directory.
 
 **System capability**: SystemCapability.FileManagement.File.FileIO
+
+**Atomic service API**: This API can be used in atomic services since API version 26.0.1.
 
 **Parameters**
 
