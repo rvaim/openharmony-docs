@@ -23,7 +23,7 @@ import { eSIM } from '@kit.TelephonyKit';
 
 isSupported\(slotId: number\): boolean
 
-获取指定卡槽是否支持eSIM功能，eSIM.isSupported在debug版本中返回false，在release版本中返回true。
+获取指定卡槽是否支持eSIM功能，eSIM.isSupported在debug版本中不支持返回false，在release版本中根据是否支持eSIM的实际情况返回true。
 
 **系统能力**：SystemCapability.Telephony.CoreService.Esim
 
