@@ -152,7 +152,7 @@ USB Key PIN码认证请求。
 
 | 名称       | 值 |  说明      |
 | ---------- | ------ | --------- |
-| UKEY_AUTH_EXTENSION_ABILITY | 1      | UkeyAuthExtensionAbility类型的Ability。 |
+| UKEY_AUTH_EXTENSION_ABILITY | 1      | [UkeyAuthExtensionAbility](./js-apis-UkeyAuthExtensionAbility.md)类型的Ability。 |
 
 ## UkeyAuthDialogInfo
 
@@ -250,7 +250,7 @@ openInstallCertificateDialog(context: common.Context, certType: CertificateType,
 | context | [common.Context](../apis-ability-kit/js-apis-app-ability-common.md#context)                   | 是   | 应用的Context。 |
 | certType | [CertificateType](#certificatetype14)                   | 是   | 要安装的证书类型，当前支持CA_CERT、CREDENTIAL_USER和CREDENTIAL_SYSTEM。 |
 | certScope | [CertificateScope](#certificatescope14)                   | 是   | 要安装的证书的使用范围，当前支持CURRENT_USER和NOT_SPECIFIED。 |
-| cert | Uint8Array                  | 是   | 表示证书数据，大小不超过8 KB。<br>当certType为CA_CERT时，证书数据必须为PEM或DER编码格式的证书数据。<br>当certType为CREDENTIAL_USER或CREDENTIAL_SYSTEM时，证书数据必须为P12编码格式的证书凭据数据。 |
+| cert | Uint8Array                  | 是   | 表示证书数据，大小不超过8KB。<br>当certType为CA_CERT时，证书数据必须为PEM或DER编码格式的证书数据。<br>当certType为CREDENTIAL_USER或CREDENTIAL_SYSTEM时，证书数据必须为P12编码格式的证书凭据数据。 |
 
 **返回值**：
 
@@ -608,8 +608,8 @@ openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): P
 | 801      | Capability not supported because the certificate management application hap is not preinstalled in the system.                                 |
 | 29700001 | Internal error. Possible causes: 1. IPC communication failed; 2. Memory operation error; 3. File operation error. Please try again.           |
 | 29700002 | The user cancels the authentication operation or operation timed out.                                                                             |
-| 29700003 | The authentication operation failed, such as: 1. The USB key certificate does not exist; 2. The USB key status is abnormal, please ask the user to check the status of the Ukey; 3. The Ukey authentication dialog box cannot be opened concurrently, please try again later.<br>适用版本：26.0.1+ |
-| 29700006 | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid.            |
+| 29700003 | The authentication operation failed, such as: The USB key certificate does not exist. The USB key status is abnormal, please ask the user to check the status of the Ukey. The Ukey authentication dialog box cannot be opened concurrently, please try again later. |
+| 29700006 | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
 
 **示例**：
 ```ts
@@ -690,9 +690,9 @@ openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthRequest: U
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
-**设备行为差异：** 该接口在PC/2in1设备可正常调用，在其他设备中返回29700005错误码。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**设备行为差异：** 该接口在PC/2in1设备可正常调用，在其他设备中返回29700005错误码。
 
 **参数**：
 
@@ -717,7 +717,7 @@ openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthRequest: U
 | 801      | Capability not supported because the certificate management application hap is not preinstalled in the system.                                 |
 | 29700001 | The certificate manager service processing failed. Possible causes: 1. IPC communication failed; 2. Memory operation error; 3. File operation error. Please try again. |
 | 29700002 | The user cancels the authentication operation.                                                                                                   |
-| 29700003 | The authentication operation failed, such as: 1. The USB key certificate does not exist; 2. The USB key status is abnormal, please ask the user to check the status of the Ukey. |
+| 29700003 | The authentication operation failed, such as: The USB key certificate does not exist. The USB key status is abnormal, please ask the user to check the status of the Ukey. |
 | 29700005 | The operation does not comply with the device security policy. Only the PC/2in1 device can open the dialog box of the UkeyAuthExtensionAbility type.  |
 | 29700006 | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid.            |
 | 29700009 | The operation in the Ukey authentication dialog box timed out.                                                                                  |

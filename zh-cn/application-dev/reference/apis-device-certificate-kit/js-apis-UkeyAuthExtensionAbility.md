@@ -39,7 +39,7 @@ import { UkeyAuthExtensionAbility } from '@kit.DeviceCertificateKit';
 
 onCreate(launchParam: AbilityConstant.LaunchParam): void
 
-当UkeyAuthExtensionAbility实例创建时调用。开发者可在该回调中执行初始化逻辑（如定义变量、加载资源等）。
+当UkeyAuthExtensionAbility组件实例完成创建时，系统会触发该回调。开发者可在该回调中执行初始化逻辑（如定义变量、加载资源等）。
 
 **起始版本：** 26.0.1
 
@@ -70,7 +70,7 @@ export default class UkeyAuthExtension extends UkeyAuthExtensionAbility {
 
 onSessionCreate(want: Want, session: UIExtensionContentSession): void
 
-当[UIExtensionContentSession](../apis-ability-kit/js-apis-app-ability-uiExtensionContentSession.md)实例创建时调用。开发者可在该回调中通过UIExtensionContentSession实例加载页面。
+当[UIExtensionContentSession](../apis-ability-kit/js-apis-app-ability-uiExtensionContentSession.md)实例创建完成后，系统会触发该回调。开发者可在该回调中通过UIExtensionContentSession实例加载页面。
 
 **起始版本：** 26.0.1
 
@@ -103,7 +103,7 @@ export default class UkeyAuthExtension extends UkeyAuthExtensionAbility {
 
 onSessionDestroy(session: UIExtensionContentSession): void
 
-当[UIExtensionContentSession](../apis-ability-kit/js-apis-app-ability-uiExtensionContentSession.md)被销毁时调用。它通知应用UIExtensionContentSession实例不再可用。
+当[UIExtensionContentSession](../apis-ability-kit/js-apis-app-ability-uiExtensionContentSession.md)实例销毁后，系统触发该回调。该回调用于通知开发者UIExtensionContentSession实例已被销毁，不能再继续使用。
 
 **起始版本：** 26.0.1
 
@@ -134,9 +134,9 @@ export default class UkeyAuthExtension extends UkeyAuthExtensionAbility {
 
 onDestroy(): void | Promise\<void>
 
-当UkeyAuthExtensionAbility被销毁时调用。开发者可在此生命周期中清除资源并保存数据。使用Promise异步回调。
+当UkeyAuthExtensionAbility组件被销毁时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。使用同步回调或Promise异步回调。
 
-**onDestroy**生命周期回调执行后，应用可能退出。因此，**onDestroy**中的异步函数（例如异步写入数据库）可能无法执行。建议使用Promise进行异步回调以避免此类问题。
+在执行完onDestroy生命周期回调后，应用可能会退出，从而可能导致onDestroy中的异步函数未能正确执行，比如异步写入数据库。推荐使用Promise异步回调，避免因应用退出导致onDestroy中的异步函数（比如异步写入数据库）未能正确执行。
 
 **起始版本：** 26.0.1
 
