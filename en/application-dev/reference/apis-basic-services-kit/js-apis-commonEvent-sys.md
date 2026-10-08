@@ -2,10 +2,10 @@
 <!--Kit: Basic Services Kit-->
 <!--Subsystem: Notification-->
 <!--Owner: @HuYueRong-->
-<!--Designer: @dongqingran-->
+<!--Designer: @wangsen1994-->
 <!--Tester: @wanghong1997-->
 <!--Adviser: @fang-jinxu-->
-<!-- md-trans-meta sourceCommit=4bb0b56d7d67b2ab3ff0955bce487aba3399fade translatedAt=2026-09-23T02:09:18.002Z pushedAt=2026-09-23T11:43:02.114Z -->
+<!-- md-trans-meta sourceCommit=1ded46b3f2c6157598c112b16f192beb1f37cf1d translatedAt=2026-09-29T09:42:19.413Z pushedAt=2026-10-08T02:39:02.485Z -->
 
 This module provides APIs to publish, subscribe to, and unsubscribe from common events, as well as obtain and modify the common event result code and result data. It is applicable to scenarios where system services or apps communicate with each other through common events. This module helps you publish and subscribe to events across apps, improving collaboration efficiency between apps.
 

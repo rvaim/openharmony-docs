@@ -2,10 +2,10 @@
 <!--Kit: Basic Services Kit-->
 <!--Subsystem: Notification-->
 <!--Owner: @HuYueRong-->
-<!--Designer: @dongqingran-->
+<!--Designer: @wangsen1994-->
 <!--Tester: @wanghong1997-->
 <!--Adviser: @fang-jinxu-->
-<!-- md-trans-meta sourceCommit=4bb0b56d7d67b2ab3ff0955bce487aba3399fade translatedAt=2026-09-23T02:14:57.947Z pushedAt=2026-09-24T03:28:39.621Z -->
+<!-- md-trans-meta sourceCommit=1ded46b3f2c6157598c112b16f192beb1f37cf1d translatedAt=2026-09-29T09:44:18.873Z pushedAt=2026-10-08T02:39:02.495Z -->
 
 This module encapsulates the data and attributes carried when a common event is published, including the event data (code/data), subscriber permissions, subscriber bundle name, whether the event is ordered or sticky, and additional parameters. It allows the publisher to precisely control the common event recipients, event delivery sequence, and sticky feature. This module is applicable to scenarios where the recipients need to be specified, custom event data needs to be transferred, and ordered/[sticky common events](../../basic-services/common-event/common-event-glossary.md#sticky-common-event) need to be implemented.
 
@@ -28,4 +28,3 @@ This module encapsulates the data and attributes carried when a common event is 
 | isOrdered             | boolean              | No  | Yes  | Whether the event is an [ordered common event](../../basic-services/common-event/common-event-glossary.md#ordered-common-event). The default value is **false**.<br> - **true**: This event is an ordered common event. Based on the priority set by the subscriber, the common event is preferentially sent to the subscriber with a higher priority. After the subscriber successfully receives the event, the public event is sent to the subscriber with a lower priority. Subscribers with the same priority receive common events in a random order.<br> - **false**: This event is an [unordered common event](../../basic-services/common-event/common-event-glossary.md#unordered-common-event). Whether subscribers receive the event is not considered, and the common event which subscribers receive may not comply with the subscription sequence.           |
 | isSticky              | boolean              | No  | Yes  | Whether the common event is a [sticky common event](../../basic-services/common-event/common-event-glossary.md#sticky-common-event). The default value is **false**.<br> - **true**: This event is a sticky common event, which allows subscribers to receive common events that have been sent before subscription.<br> - **false**: This event is not a sticky common event, which allows subscribers to receive common events sent after subscription.<br>**Required permissions:** [ohos.permission.COMMONEVENT_STICKY](../../security/AccessToken/permissions-for-all.md#ohospermissioncommonevent_sticky) |
 | parameters            | {[key: string]: any} | No  | Yes  | Additional information about the common event transferred by the publisher. Custom parameters are configured in a key-value pair format. This parameter is left empty by default.<br>**Atomic service API:** This API can be used in atomic services since API version 11.       |
-<!--no_check-->
