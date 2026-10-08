@@ -132,7 +132,7 @@ onDestroy(): void | Promise\<void>
 
 当UkeyAuthExtensionAbility被销毁时调用。开发者可在此生命周期中清除资源并保存数据。此接口同步返回结果或使用Promise返回结果。
 
-**onDestroy()**生命周期回调执行后，应用可能退出。因此，**onDestroy()**中的异步函数（例如异步写入数据库）可能无法执行。建议使用Promise进行异步回调以避免此类问题。
+**onDestroy**生命周期回调执行后，应用可能退出。因此，**onDestroy**中的异步函数（例如异步写入数据库）可能无法执行。建议使用Promise进行异步回调以避免此类问题。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
