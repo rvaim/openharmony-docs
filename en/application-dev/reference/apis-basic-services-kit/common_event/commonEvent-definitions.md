@@ -1,11 +1,11 @@
-# System Common Event Definitions
+# System Common Events
 <!--Kit: Basic Services Kit-->
 <!--Subsystem: Notification-->
 <!--Owner: @HuYueRong-->
 <!--Designer: @wangsen1994-->
 <!--Tester: @wanghong1997-->
 <!--Adviser: @fang-jinxu-->
-<!-- md-trans-meta sourceCommit=d92fd96c7713dc18450281df98f1c9ed5f77b2c9 translatedAt=2026-09-29T09:38:57.952Z pushedAt=2026-10-08T02:39:02.463Z -->
+<!-- md-trans-meta sourceCommit=d92fd96c7713dc18450281df98f1c9ed5f77b2c9 translatedAt=2026-09-29T09:38:57.952Z pushedAt=2026-10-08T04:38:23.323Z -->
 
 This document provides indexes for predefined system common events.
 
