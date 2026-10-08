@@ -5,18 +5,20 @@
 <!--Designer: @lingminghw-->
 <!--Tester: @RayShih-->
 <!--Adviser: @fang-jinxu-->
-<!-- md-trans-meta sourceCommit=c68ee3b9aca136aa0cab50a5bff69a240c48dbd0 translatedAt=2026-09-01T08:40:06.076Z pushedAt=2026-09-07T01:07:36.279Z -->
+<!-- md-trans-meta sourceCommit=0465d91a41b28967c4ac52bdef1f4b65dc5a5935 translatedAt=2026-09-29T09:46:00.757Z pushedAt=2026-10-08T02:39:02.499Z -->
 
 - ArkTS API<!--basic-services-arkts-->
   - Account Management<!--account-management-arkts-->
     - [@ohos.account.appAccount (Application Account Management)](js-apis-appAccount.md)
     - [@ohos.account.distributedAccount (Distributed Account Management)](js-apis-distributed-account.md)
     - [@ohos.account.osAccount (System Account Management)](js-apis-osAccount.md)
+    - [@ohos.account.osAccount.authorization (OS Account Authorization Manager)](js-apis-osAccount-authorization.md)
     <!--Del-->
-    - [@ohos.account.distributedAccount (Distributed Account Management) (System Interface)](js-apis-distributed-account-sys.md)
-    - [@ohos.account.osAccount (System Account Management) (System Interface)](js-apis-osAccount-sys.md)
+    - [@ohos.account.distributedAccount (Distributed Account Management) (System API)](js-apis-distributed-account-sys.md)
+    - [@ohos.account.osAccount (OS Account Management) (System API)](js-apis-osAccount-sys.md)
     <!--DelEnd-->
     - [OS Account Constraints](appendix-osAccount-constraints.md)
+    - [OS Account Privilege List](appendix-osAccount-authorization-privileges.md)
   - Device Management<!--device-management-arkts-->
     - [@ohos.batteryInfo (battery information)](js-apis-battery-info.md)
     - [@ohos.busManager.serial (Serial Port Management)](js-apis-busmanager-serial.md)
@@ -39,7 +41,7 @@
     - [@ohos.screenLock (screen lock management)(System API)](js-apis-screen-lock-sys.md)
     - [@ohos.usbManager (USB Manager) (System API)](js-apis-usbManager-sys.md)
     - [@ohos.usbManager.serial (Serial Port Management) (System API)](js-apis-serialManager-sys.md)
-    - [@ohos.update (Update)(System Interface)](js-apis-update-sys.md)
+    - [@ohos.update (Update)(System API)](js-apis-update-sys.md)
     <!--DelEnd-->
   - Data File Processing<!--data-file-processing-arkts-->
     - [@ohos.app.ability.PrintExtensionAbility (Print Extension Ability)](js-apis-app-ability-PrintExtensionAbility.md)
@@ -79,7 +81,7 @@
       - [CommonEventSubscribeInfo](js-apis-inner-commonEvent-commonEventSubscribeInfo.md)
   - Others<!--basic-services-others-->
     <!--Del-->
-    - [@ohos.ai.intelligentVoice (Intelligent Voice) (System Interface)](js-apis-intelligentVoice-sys.md)
+    - [@ohos.ai.intelligentVoice (Intelligent Voice) (System API)](js-apis-intelligentVoice-sys.md)
     <!--DelEnd-->
     - [@ohos.base (Public Callback Information)](js-apis-base.md)
     - [@ohos.annotation (Annotation)](js-apis-annotation.md)
@@ -110,7 +112,7 @@
     - [@ohos.screenLock (Screen Lock Management)](js-apis-screen-lock.md)
     <!--Del-->
     - [@ohos.commonEvent (Common Event) (System API)](js-apis-commonEvent-sys.md)
-    - [@ohos.usb (USB Management) (System Interface)](js-apis-usb-deprecated-sys.md)
+    - [@ohos.usb (USB Manager) (System API)](js-apis-usb-deprecated-sys.md)
     - [@ohos.systemParameter (System Parameter) (System API)](js-apis-system-parameter-sys.md)
     <!--DelEnd-->
     - [@ohos.systemTime (system time, time zone)](js-apis-system-time.md)
@@ -124,6 +126,7 @@
     - [OH_Print](capi-oh-print.md)
     - [Pasteboard](capi-pasteboard.md)
     - [TimeService](capi-timeservice.md)
+    - [UsbManager](capi-usbmanager.md)
   - Header Files<!--basic-services-headerfile-->
     - [deviceinfo.h](capi-deviceinfo-h.md)
     - [ohbattery_info.h](capi-ohbattery-info-h.md)
@@ -136,6 +139,7 @@
     - [ohprint.h](capi-ohprint-h.md)
     - [ohscan.h](capi-ohscan-h.md)
     - [time_service.h](capi-time-service-h.md)
+    - [ohusb_manager.h](capi-ohusb-manager-h.md)
   - Structs<!--basic-services-struct-->
     - [CommonEvent_SubscribeInfo](capi-oh-commonevent-commonevent-subscribeinfo.md)
     - [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md)
@@ -160,6 +164,11 @@
     - [Scan_ScannerDevice](capi-oh-scan-scan-scannerdevice.md)
     - [Scan_PictureScanProgress](capi-oh-scan-scan-picturescanprogress.md)
     - [Scan_ScannerOptions](capi-oh-scan-scan-scanneroptions.md)
+    - [OH_UsbManager_UsbConfig](capi-usbmanager-oh-usbmanager-usbconfig.md)
+    - [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md)
+    - [OH_UsbManager_UsbEndpoint](capi-usbmanager-oh-usbmanager-usbendpoint.md)
+    - [OH_UsbManager_UsbInterface](capi-usbmanager-oh-usbmanager-usbinterface.md)
+    - [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md)
 - Error Codes<!--basic-services-arkts-errcode-->
   - [USB Service Error Codes](errorcode-usb.md)
   - [Serial Port Management Error Codes](errorcode-busmanager-serial.md)

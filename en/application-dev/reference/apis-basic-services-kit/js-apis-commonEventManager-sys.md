@@ -2,10 +2,10 @@
 <!--Kit: Basic Services Kit-->
 <!--Subsystem: Notification-->
 <!--Owner: @HuYueRong-->
-<!--Designer: @dongqingran-->
+<!--Designer: @wangsen1994-->
 <!--Tester: @wanghong1997-->
 <!--Adviser: @fang-jinxu-->
-<!-- md-trans-meta sourceCommit=4bb0b56d7d67b2ab3ff0955bce487aba3399fade translatedAt=2026-09-23T02:12:51.247Z pushedAt=2026-09-24T01:42:56.500Z -->
+<!-- md-trans-meta sourceCommit=1ded46b3f2c6157598c112b16f192beb1f37cf1d translatedAt=2026-09-29T09:43:33.392Z pushedAt=2026-10-08T02:39:02.489Z -->
 
 This module provides system APIs to publish common events to specified users, remove [sticky common events](../../basic-services/common-event/common-event-glossary.md#sticky-common-event), enable or disable [static subscription](../../basic-services/common-event/common-event-glossary.md#static-subscription) events.
 
@@ -24,15 +24,6 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 ## Support
 
 [System common events](../../basic-services/common-event/common-event-glossary.md#system-common-event) refer to events released by system services or system apps. Subscribing to these events requires specific permissions. To publish or subscribe to this type of event, you must follow the event-specific definitions.
-
-
-
-
-
-
-
-
-
 
 For details about the enums of all system common events, see [System Common Events (System API)](./common_event/commonEventManager-definitions-sys.md).
 
@@ -385,4 +376,3 @@ commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
   console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 ```
-<!--no_check-->
