@@ -58,7 +58,7 @@ import { carAwareness } from '@kit.MultimodalAwarenessKit';
 | 名称 | 类型 | 只读 | 可选 | 说明 |
 | ---- | ---- | ---- | ---- | ---- |
 | timestamp | number | 否 | 否 | 识别结果的时间戳。<br>单位：ms。 |
-| capability | [Capability](#capability) | 否 | 否 | 对应的感知能力类型。 |
+| capability | [Capability](#capability) | 否 | 否 | 指定的感知能力类型。 |
 | awarenessEvent | Record\<string, Object\> | 否 | 是 | 感知结果数据键值对，不同能力返回不同字段。 |
 
 ## CarAwarenessOptions
