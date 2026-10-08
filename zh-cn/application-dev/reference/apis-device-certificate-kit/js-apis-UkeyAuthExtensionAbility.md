@@ -9,14 +9,14 @@
 
 UkeyAuthExtensionAbility是用于UKey认证UI显示的ExtensionAbility组件，继承自[ExtensionAbility](../apis-ability-kit/js-apis-app-ability-extensionAbility.md)。驱动厂商可以通过继承UkeyAuthExtensionAbility并实现相关生命周期回调，提供自定义的UKey认证界面，该界面通过宿主应用启动的[UIExtensionContentSession](../apis-ability-kit/js-apis-app-ability-uiExtensionContentSession.md)进行显示。
 
-与[UIExtensionAbility](../apis-ability-kit/js-apis-app-ability-uiExtensionAbility.md)不同，UkeyAuthExtensionAbility不提供onForeground和onBackground生命周期回调。仅被授予ohos.permission.START_SYSTEM_DIALOG权限的应用可以启动它。
+与[UIExtensionAbility](../apis-ability-kit/js-apis-app-ability-uiExtensionAbility.md)不同，UkeyAuthExtensionAbility不提供onForeground和onBackground生命周期回调。仅被授予ohos.permission.START_SYSTEM_DIALOG权限的应用可以启动UkeyAuthExtensionAbility。
 
 **起始版本：** 26.0.1
 
 ## 导入模块
 
 ```ts
-import { UkeyAuthExtensionAbility, UkeyAuthExtensionContext } from '@kit.DeviceCertificateKit';
+import { UkeyAuthExtensionAbility } from '@kit.DeviceCertificateKit';
 ```
 
 ## UkeyAuthExtensionAbility
@@ -28,11 +28,13 @@ import { UkeyAuthExtensionAbility, UkeyAuthExtensionContext } from '@kit.DeviceC
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 ### 属性
+
 **起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
  
 **模型约束：** 此接口仅可在Stage模型下使用。
+
 | 名称 | 类型 | 只读 | 可选 | 说明 |
 | -------- | -------- | -------- | -------- | -------- |
 | context | [UkeyAuthExtensionContext](js-apis-UkeyAuthExtensionContext.md) | 否 | 否 | UkeyAuthExtensionAbility的上下文。 |
@@ -42,6 +44,8 @@ import { UkeyAuthExtensionAbility, UkeyAuthExtensionContext } from '@kit.DeviceC
 onCreate(launchParam: AbilityConstant.LaunchParam): void
 
 当UkeyAuthExtensionAbility实例创建时调用。开发者可在该回调中执行初始化逻辑（如定义变量、加载资源等）。
+
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -71,6 +75,8 @@ export default class UkeyAuthExtension extends UkeyAuthExtensionAbility {
 onSessionCreate(want: Want, session: UIExtensionContentSession): void
 
 当[UIExtensionContentSession](../apis-ability-kit/js-apis-app-ability-uiExtensionContentSession.md)实例创建时调用。开发者可在该回调中通过UIExtensionContentSession实例加载页面。
+
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -103,6 +109,8 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 当[UIExtensionContentSession](../apis-ability-kit/js-apis-app-ability-uiExtensionContentSession.md)被销毁时调用。它通知应用UIExtensionContentSession实例不再可用。
 
+**起始版本：** 26.0.1
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -133,6 +141,8 @@ onDestroy(): void | Promise\<void>
 当UkeyAuthExtensionAbility被销毁时调用。开发者可在此生命周期中清除资源并保存数据。使用Promise异步回调。
 
 **onDestroy**生命周期回调执行后，应用可能退出。因此，**onDestroy**中的异步函数（例如异步写入数据库）可能无法执行。建议使用Promise进行异步回调以避免此类问题。
+
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 

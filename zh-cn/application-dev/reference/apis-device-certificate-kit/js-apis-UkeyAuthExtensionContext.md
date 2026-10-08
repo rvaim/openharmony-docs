@@ -9,11 +9,7 @@
 
 UkeyAuthExtensionContext是[UkeyAuthExtensionAbility](js-apis-UkeyAuthExtensionAbility.md)的上下文，继承自[ExtensionContext](../apis-ability-kit/js-apis-inner-application-extensionContext.md)，仅提供终止能力。
 
-> **说明：**
->
-> 本模块首批接口从API version 26.0.1开始支持。
->
-> 本模块接口仅可在Stage模型下使用。
+**起始版本：** 26.0.1
 
 ## 导入模块
 
@@ -34,6 +30,8 @@ import { UkeyAuthExtensionContext } from '@kit.DeviceCertificateKit';
 terminateSelf(): Promise\<void>
 
 销毁此UkeyAuthExtensionAbility并关闭相应窗口。使用Promise异步回调。
+
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
@@ -68,6 +66,8 @@ export default class UkeyAuthExtension extends UkeyAuthExtensionAbility {
 terminateSelfWithResult(parameter: AbilityResult): Promise\<void>
 
 销毁此UkeyAuthExtensionAbility，关闭相应窗口，并将结果返回给UkeyAuthExtensionAbility的调用方（通常为系统服务）。使用Promise异步回调。
+
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
