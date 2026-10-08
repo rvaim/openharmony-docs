@@ -23,6 +23,10 @@ import { UkeyAuthExtensionAbility } from '@kit.DeviceCertificateKit';
 
 表示UKey认证UI扩展组件，提供组件创建、会话创建、会话销毁、组件销毁等生命周期回调。
 
+**起始版本：** 26.0.1
+
+**系统能力：** SystemCapability.Security.CertificateManagerDialog
+
 ### 属性
 
 **起始版本：** 26.0.1
@@ -148,7 +152,7 @@ onDestroy(): void | Promise\<void>
 
 | 类型 | 说明 |
 | -------- | -------- |
-| void \| Promise\<void> | 返回无值的Promise。 |
+| void \| Promise\<void> | Promise对象，无返回结果。 |
 
 **示例：**
 

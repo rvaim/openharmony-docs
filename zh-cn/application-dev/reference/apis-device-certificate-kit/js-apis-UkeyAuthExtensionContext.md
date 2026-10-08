@@ -21,11 +21,15 @@ import { UkeyAuthExtensionContext } from '@kit.DeviceCertificateKit';
 
 表示UkeyAuthExtensionAbility的上下文，提供终止UkeyAuthExtensionAbility等能力。
 
+**起始版本：** 26.0.1
+
+**系统能力：** SystemCapability.Security.CertificateManagerDialog
+
 ### terminateSelf
 
 terminateSelf(): Promise\<void>
 
-销毁此UkeyAuthExtensionAbility并关闭相应窗口。使用Promise异步回调。
+销毁调用当前接口的UkeyAuthExtensionAbility并关闭相应窗口。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
@@ -61,7 +65,7 @@ export default class UkeyAuthExtension extends UkeyAuthExtensionAbility {
 
 terminateSelfWithResult(parameter: AbilityResult): Promise\<void>
 
-销毁此UkeyAuthExtensionAbility，关闭相应窗口，并将结果返回给UkeyAuthExtensionAbility的调用方（通常为系统服务）。使用Promise异步回调。
+销毁调用当前接口的UkeyAuthExtensionAbility，关闭相应窗口，并将结果返回给UkeyAuthExtensionAbility的调用方（通常为系统服务）。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
