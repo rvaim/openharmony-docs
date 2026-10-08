@@ -1620,7 +1620,7 @@ ArkWeb同层渲染场景下的私有属性`arkwebnativestyle`，仅在开启同�
 
 - transform rotate/skew变换导致
 
-  同层标签应用CSS transform中的rotate/skew变换后，画面出现拉伸变形时，从API version 26.2开始，可通过[nativeEmbedOptions](../reference/apis-arkweb/arkts-basic-components-web-attributes.md#nativeembedoptions16)将[EmbedOptions](../reference/apis-arkweb/arkts-basic-components-web-i.md#embedoptions16)中的supportTransformRotateAndSkew设为true解决。
+  同层标签应用CSS transform中的rotate/skew变换后，画面出现拉伸变形时，从API版本26.2.0开始，可通过[nativeEmbedOptions](../reference/apis-arkweb/arkts-basic-components-web-attributes.md#nativeembedoptions16)将[EmbedOptions](../reference/apis-arkweb/arkts-basic-components-web-i.md#embedoptions16)中的supportTransformRotateAndSkew设为true解决。
 
 - 自定义组件宽高未指定为同层渲染标签的宽高
 
