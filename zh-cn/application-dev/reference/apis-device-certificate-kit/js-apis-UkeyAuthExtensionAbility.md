@@ -23,10 +23,6 @@ import { UkeyAuthExtensionAbility } from '@kit.DeviceCertificateKit';
 
 表示UKey认证UI扩展组件，提供组件创建、会话创建、会话销毁、组件销毁等生命周期回调。
 
-**系统能力：** SystemCapability.Security.CertificateManagerDialog
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 ### 属性
 
 **起始版本：** 26.0.1

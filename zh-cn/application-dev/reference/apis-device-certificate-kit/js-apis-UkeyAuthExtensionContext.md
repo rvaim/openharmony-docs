@@ -21,10 +21,6 @@ import { UkeyAuthExtensionContext } from '@kit.DeviceCertificateKit';
 
 表示UkeyAuthExtensionAbility的上下文，提供终止UkeyAuthExtensionAbility等能力。
 
-**系统能力：** SystemCapability.Security.CertificateManagerDialog
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 ### terminateSelf
 
 terminateSelf(): Promise\<void>
