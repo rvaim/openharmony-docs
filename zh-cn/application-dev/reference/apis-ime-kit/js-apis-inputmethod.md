@@ -286,7 +286,7 @@ switchInputMethod(target: InputMethodProperty, callback: AsyncCallback&lt;boolea
 
 > **说明：**
 >
-> 该接口在[评估管理](../apis-assessment-kit/js-apis-customization-assessment.md)开启时无法切换到其他输入法应用。
+> 该接口在评估管理开启时无法切换到其他输入法应用。
 
 含义/功能：将当前输入法切换为指定的目标输入法。
 
@@ -348,7 +348,7 @@ switchInputMethod(target: InputMethodProperty): Promise&lt;boolean&gt;
 
 > **说明：**
 >
-> 该接口在[评估管理](../apis-assessment-kit/js-apis-customization-assessment.md)开启时无法切换到其他输入法应用。
+> 该接口在评估管理开启时无法切换到其他输入法应用。
 
 含义/功能：将当前输入法切换为指定的目标输入法。
 
