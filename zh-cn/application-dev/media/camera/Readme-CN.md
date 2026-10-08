@@ -20,6 +20,7 @@
     - [拍照(ArkTS)](camera-shooting.md)
     - [拍照实践(ArkTS)](camera-shooting-case.md)
     - [分段式拍照(ArkTS)](camera-deferred-capture.md)
+    - [分段式拍照实践(ArkTS)](camera-deferred-capture-case.md)
     - [YUV拍照(ArkTS)](camera-yuv-shooting.md)<!--RP1--><!--RP1End-->
     - [相机基础动效(ArkTS)](camera-animation.md)
     - [元数据(ArkTS)](camera-metadata.md)
@@ -35,7 +36,8 @@
     - [相机控制器(ArkTS)](camera-control-center.md)
   - 相机参数设置(ArkTS)<!--camera-dev-arkts-params-->
     - [手电筒使用(ArkTS)](camera-torch-use.md)
-    - [微距能力设置(ArkTS)](camera-macro.md)<!--RP4--><!--RP4End-->
+    - [微距能力设置(ArkTS)](camera-macro.md)
+    - [白平衡设置(ArkTS)](camera-whitebalance.md)<!--RP4--><!--RP4End-->
   - 相机性能优化(ArkTS)<!--camera-dev-arkts-perf--><!--RP3--><!--RP3End-->
     - [压力管控(ArkTS)](camera-system-pressure.md)
     - [在Worker线程中使用相机(ArkTS)](camera-worker.md)
@@ -49,7 +51,7 @@
     - [多摄同开(ArkTS)](camera-concurrent-open.md)
 - 相机应用开发(C/C++)<!--camera-dev-native-->
   - 配置相机设备与输入(C/C++)<!--camera-dev-native-mandatory-->
-    - [管理相机设备(C/C++)](native-camera-device-management.md)
+    - [相机管理(C/C++)](native-camera-device-management.md)
     - [设备输入(C/C++)](native-camera-device-input.md)
     - [会话管理(C/C++)](native-camera-session-management.md)
   - 拍照与预览(C/C++)<!--camera-dev-native-preview-->
