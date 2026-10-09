@@ -1724,6 +1724,10 @@ Allows an application to enter exam mode. The system service will display a dial
 
 Allows an application to manage cloud drive sync folders.
 
+With this permission, the application can add sync root folders to the sidebar of the file manager and customize the icons of sync root folders.
+
+<!--RP115--><!--RP115End-->
+
 **Permission level**: system_basic
 
 **Authorization mode**: system_grant
