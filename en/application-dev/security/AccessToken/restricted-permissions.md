@@ -1732,8 +1732,6 @@ With this permission, the application can add sync root folders to the sidebar o
 
 **Authorization mode**: system_grant
 
-**Certificate-based authorization**: true
-
 **Supported devices**: PCs/2-in-1 devices | tablets
 
 **Since**: 26.0.1
