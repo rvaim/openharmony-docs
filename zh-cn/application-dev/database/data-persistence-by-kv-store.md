@@ -42,44 +42,7 @@
 
 1. 若要使用键值型数据库，首先要使用createKVManager()方法获取一个KVManager实例，用于管理数据库对象。此处context获取以Stage模型为例，FA模型context的获取请见[context](../application-models/application-context-fa.md)，示例代码如下所示：
 
-   <!-- @[get_context](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/KvStoreSamples/entry/src/main/ets/pages/KvStoreInterface.ets) -->
-   
-   ``` TypeScript
-   import { distributedKVStore } from '@kit.ArkData';
-   import { BusinessError } from '@kit.BasicServicesKit';
-   import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-   import EntryAbility from '../entryability/EntryAbility';
-   import Logger from '../common/Logger';
-   
-   let kvManager: distributedKVStore.KVManager | undefined = undefined;
-   let kvStore: distributedKVStore.SingleKVStore | undefined = undefined;
-   let appId: string = 'com.example.kvstoresamples';
-   let storeId: string = 'storeId';
-   const context = EntryAbility.getContext();
-   ```
-  
-   <!-- @[kv_store1](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/KvStoreSamples/entry/src/main/ets/pages/KvStoreInterface.ets) -->
-   
-   ``` TypeScript
-   public CreateKvManager = (() => {
-     Logger.info('CreateKvManager start');
-     if (typeof (kvManager) === 'undefined') {
-       const kvManagerConfig: distributedKVStore.KVManagerConfig = {
-         bundleName: appId,
-         context: context
-       };
-       try {
-         // 创建KVManager实例
-         kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-         Logger.info('Succeeded in creating KVManager.');
-       } catch (err) {
-         Logger.error(`Failed to create KVManager. Code:${err.code},message:${err.message}`);
-       }
-     } else {
-       Logger.info ('KVManager has created');
-     }
-   })
-   ```
+   <!-- @[CreateKvManager](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/KvStoreSamples/entry/src/main/ets/pages/KvStoreInterface.ets) -->
 
 2. 使用getKVStore()方法创建并获取键值数据库。示例代码如下所示：
 
