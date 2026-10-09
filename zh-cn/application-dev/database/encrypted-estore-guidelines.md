@@ -323,6 +323,136 @@ export class ECStoreManager {
 
 <!-- @[EntryAbility](https://gitcode.com/openharmony/applications_app_samples/blob/master/code/DocsSample/ArkData/KvStore/ECStoreSamples/entry/src/main/ets/entryability/EntryAbility.ets) -->
 
+``` TypeScript
+import { AbilityConstant, application, contextConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window } from '@kit.ArkUI';
+import { distributedKVStore } from '@kit.ArkData';
+import { ECStoreManager } from './ECStoreManager';
+import { StoreInfo } from './Store';
+import { Mover } from './Mover';
+import { SecretKeyObserver } from './SecretKeyObserver';
+import { BusinessError, commonEventManager } from '@kit.BasicServicesKit';
+import Logger from '../common/Logger';
+
+export let storeManager = new ECStoreManager();
+export let e_secretKeyObserver = new SecretKeyObserver();
+let mover = new Mover();
+let subscriber: commonEventManager.CommonEventSubscriber;
+
+export function createCB(err: BusinessError, commonEventSubscriber: commonEventManager.CommonEventSubscriber) {
+  if (!err) {
+    Logger.info('ECDB_Encry createSubscriber');
+    subscriber = commonEventSubscriber;
+    try {
+      commonEventManager.subscribe(subscriber, (err: BusinessError, data: commonEventManager.CommonEventData) => {
+        if (err) {
+          Logger.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+        } else {
+          Logger.info(`ECDB_Encry SubscribeCB ${data.code}`);
+          e_secretKeyObserver.updateLockStatus(data.code);
+        }
+      });
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      Logger.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+    }
+  } else {
+    Logger.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+  }
+}
+
+let cInfo: StoreInfo | null = null;
+let eInfo: StoreInfo | null = null;
+
+export default class EntryAbility extends UIAbility {
+  async onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): Promise<void> {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    try {
+      let cContext = this.context;
+      cInfo = {
+        'kvManagerConfig': {
+          context: cContext,
+          bundleName: 'com.example.ecstoresamples'
+        },
+        'storeId': 'cstore',
+        'option': {
+          createIfMissing: true,
+          encrypt: false,
+          backup: false,
+          autoSync: false,
+          // kvStoreType不填时，默认创建多设备协同数据库
+          kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+          // 多设备协同数据库：kvStoreType: distributedKVStore.KVStoreType.DEVICE_COLLABORATION
+          securityLevel: distributedKVStore.SecurityLevel.S3
+        }
+      }
+      let eContext = await application.createModuleContext(this.context,'entry');
+      eContext.area = contextConstant.AreaMode.EL5;
+      eInfo = {
+        'kvManagerConfig': {
+          context: eContext,
+          bundleName: 'com.example.ecstoresamples'
+        },
+        'storeId': 'estore',
+        'option': {
+          createIfMissing: true,
+          encrypt: false,
+          backup: false,
+          autoSync: false,
+          // kvStoreType不填时，默认创建多设备协同数据库
+          kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+          // 多设备协同数据库：kvStoreType: distributedKVStore.KVStoreType.DEVICE_COLLABORATION
+          securityLevel: distributedKVStore.SecurityLevel.S3
+        }
+      }
+      Logger.info(`ECDB_Encry store area : estore:${eContext.area},cstore${cContext.area}`);
+      // 监听COMMON_EVENT_SCREEN_LOCK_FILE_ACCESS_STATE_CHANGED事件 code == 1解锁状态，code==0加锁状态
+
+      commonEventManager.createSubscriber({
+        events: [ 'COMMON_EVENT_SCREEN_LOCK_FILE_ACCESS_STATE_CHANGED' ]
+      }, createCB);
+      Logger.info(`ECDB_Encry success subscribe`);
+
+      storeManager.config(cInfo, eInfo);
+      storeManager.configDataMover(mover);
+      e_secretKeyObserver.initialize(storeManager);
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      Logger.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+    }
+  }
+
+  onDestroy(): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
+  }
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+
+    windowStage.loadContent('pages/Index', (err) => {
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
+        return;
+      }
+      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content.');
+    });
+  }
+
+  onWindowStageDestroy(): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
+  }
+
+  onForeground(): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
+  }
+
+  onBackground(): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
+  }
+}
+```
+
 ### Index按键事件
 
 使用Button按钮，通过点击按钮来模拟应用操作数据库，如插入数据、删除数据、更新数据和获取数据数量的操作等，展示数据库基本的增删改查能力。
