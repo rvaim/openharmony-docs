@@ -9506,3 +9506,17 @@ Allows an application to modify the device security level (DSL) configuration.
 **Supported devices**: PCs/2-in-1 devices | tablets
 
 **Valid since**: 26.2.0
+
+## ohos.permission.vehicle.INNER_NETWORK
+
+Allows an application to access the vehicle's internal networks.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: cars
+
+**Valid since**: 26.2.0
