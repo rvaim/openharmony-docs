@@ -2,7 +2,7 @@
 <!--Kit: Media Kit-->
 <!--Subsystem: Multimedia-->
 <!--Owner: @chennotfound-->
-<!--Designer: @dongyu_dy-->
+<!--Designer: @chennotfound-->
 <!--Tester: @xchaosioda-->
 <!--Adviser: @w_Machine_cc-->
 <!-- md-trans-meta sourceCommit=09a82d06cdbfe294e7bdee52844240f730ae4276 translatedAt=2026-09-15T16:01:01.304Z pushedAt=2026-09-22T01:34:18.774Z -->
