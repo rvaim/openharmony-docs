@@ -9507,6 +9507,20 @@ Allows an application to modify the device security level (DSL) configuration.
 
 **Valid since**: 26.2.0
 
+## ohos.permission.vehicle.INNER_NETWORK
+
+Allows an application to access the vehicle's internal networks.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: cars
+
+**Valid since**: 26.2.0
+
 ## ohos.permission.vehicle.LOGIN_TSP
 
 Allows an application to call the login and logout APIs of the automotive cloud mobile service.
