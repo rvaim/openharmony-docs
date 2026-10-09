@@ -88,7 +88,7 @@ startPerceptionAdv(type:&nbsp;[PerceptionType](#perceptiontype), customData?:&nb
 
 **系统能力**：SystemCapability.Communication.SoftBus.Core
 
-**设备行为差异**：该接口在儿童表和2in1 IT版设备上调用会返回错误码801，其他设备可正常调用。
+**设备行为差异**：该接口在不支持分布式业务的Wearable/2in1设备中会返回错误码801，其他设备可正常调用。
 
 **参数：**
 
@@ -157,7 +157,7 @@ setPerceptionAdvHighFreq(type:&nbsp;[PerceptionType](#perceptiontype), customDat
 
 **系统能力**：SystemCapability.Communication.SoftBus.Core
 
-**设备行为差异**：该接口在儿童表和2in1 IT版设备上调用会返回错误码801，其他设备可正常调用。
+**设备行为差异**：该接口在不支持分布式业务的Wearable/2in1设备中会返回错误码801，其他设备可正常调用。
 
 **参数：**
 
@@ -223,7 +223,7 @@ stopPerceptionAdv(type:&nbsp;[PerceptionType](#perceptiontype)):&nbsp;Promise&lt
 
 **系统能力**：SystemCapability.Communication.SoftBus.Core
 
-**设备行为差异**：该接口在儿童表和2in1 IT版设备上调用会返回错误码801，其他设备可正常调用。
+**设备行为差异**：该接口在不支持分布式业务的Wearable/2in1设备中会返回错误码801，其他设备可正常调用。
 
 **参数：**
 
@@ -286,7 +286,7 @@ startPerceptionScan(type:&nbsp;[PerceptionType](#perceptiontype), cycle:&nbsp;[P
 
 **系统能力**：SystemCapability.Communication.SoftBus.Core
 
-**设备行为差异**：该接口在硬件支持sensorhub的Phone/Tablet/2in1设备（2in1设备IT版除外）中可正常调用，其他设备调用会返回错误码801。
+**设备行为差异**：该接口在硬件支持sensorhub的Phone/Tablet/部分2in1设备中可正常调用，其他设备调用会返回错误码801。
 
 **参数：**
 
@@ -352,7 +352,7 @@ stopPerceptionScan(type:&nbsp;[PerceptionType](#perceptiontype)):&nbsp;Promise&l
 
 **系统能力**：SystemCapability.Communication.SoftBus.Core
 
-**设备行为差异**：该接口在硬件支持sensorhub的Phone/Tablet/2in1设备（2in1设备IT版除外）中可正常调用，其他设备调用会返回错误码801。
+**设备行为差异**：该接口在硬件支持sensorhub的Phone/Tablet/部分2in1设备中可正常调用，其他设备调用会返回错误码801。
 
 **参数：**
 
@@ -415,7 +415,7 @@ getPerceptionDeviceList(type:&nbsp;[PerceptionType](#perceptiontype)):&nbsp;Prom
 
 **系统能力**：SystemCapability.Communication.SoftBus.Core
 
-**设备行为差异**：该接口在硬件支持sensorhub的Phone/Tablet/2in1设备（2in1设备IT版除外）中可正常调用，其他设备调用会返回错误码801。
+**设备行为差异**：该接口在硬件支持sensorhub的Phone/Tablet/部分2in1设备中可正常调用，其他设备调用会返回错误码801。
 
 **参数：**
 
