@@ -1,8 +1,8 @@
 # Using AVPlayer to Add External Subtitles to Videos (ArkTS)
 <!--Kit: Media Kit-->
 <!--Subsystem: Multimedia-->
-<!--Owner: @chennotfound-->
-<!--Designer: @chennotfound-->
+<!--Owner: @xushubo; @chennotfound-->
+<!--Designer: @dongyu_dy-->
 <!--Tester: @xchaosioda-->
 <!--Adviser: @w_Machine_cc-->
 

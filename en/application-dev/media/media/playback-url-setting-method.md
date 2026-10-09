@@ -1,8 +1,8 @@
 # Using AVPlayer to Set Playback URLs (ArkTS)
 <!--Kit: Media Kit-->
 <!--Subsystem: Multimedia-->
-<!--Owner: @chennotfound-->
-<!--Designer: @chennotfound-->
+<!--Owner: @xushubo; @chennotfound-->
+<!--Designer: @dongyu_dy-->
 <!--Tester: @xchaosioda-->
 <!--Adviser: @w_Machine_cc-->
 This topic describes how to use the AVPlayer to set URLs in different playback scenarios.
