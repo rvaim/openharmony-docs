@@ -50,9 +50,9 @@ import softbusBase from '@ohos.distributed.softbusBase';
 
 | 名称 | 值 | 说明 |
 | -------- | -------- | -------- |
-| PERCEPTION_CYCLE_LOW | 0 | 低档位。保活周期为150秒，即150秒内未收到某设备的广播则将该设备从已发现设备列表中移除。功耗最低。 |
+| PERCEPTION_CYCLE_LOW | 0 | 低档位。保活周期为150秒，即150秒内未收到某设备的广播则将该设备从已发现设备列表中移除。 |
 | PERCEPTION_CYCLE_MEDIUM | 1 | 中档位。保活周期为75秒，即75秒内未收到某设备的广播则将该设备从已发现设备列表中移除。 |
-| PERCEPTION_CYCLE_HIGH | 2 | 高档位。保活周期为30秒，即30秒内未收到某设备的广播则将该设备从已发现设备列表中移除。响应最及时。 |
+| PERCEPTION_CYCLE_HIGH | 2 | 高档位。保活周期为30秒，即30秒内未收到某设备的广播则将该设备从已发现设备列表中移除。 |
 
 ## PerceptionDeviceInfo
 
