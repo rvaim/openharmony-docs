@@ -297,7 +297,7 @@ Interface for refueling response info.
 | Name | Type | Read Only | Optional | Description |
 | ---- | ---- | ---- | ---- | ---- |
 | timestamp | number | No | No | Timestamp of the recognition result.<br>Unit: ms. |
-| status | number | No | No | Refueling status.<br>-1: invalid<br>0: idle (refueling not started)<br>1: refueling started<br>2: refueling finished |
+| status | number | No | No | Refueling status.<br>-1: invalid<br>0: idle (refueling is not started)<br>1: refueling started<br>2: refueling finished |
 
 ## carAwareness.onRefueling
 
