@@ -35,7 +35,7 @@ List的预加载是指除了加载显示区域内可见的子组件外，还支�
 
 ## 子组件
 
-仅支持[ListItem](ts-container-listitem.md)、[ListItemGroup](ts-container-listitemgroup.md)子组件和自定义组件。自定义组件在List下使用时，请使用ListItem或ListItemGroup作为自定义组件的顶层组件，请勿直接给自定义组件设置属性和事件方法，因为List通过ListItem或ListItemGroup管理子组件的布局和事件处理，直接设置可能导致部分功能无法正常生效。
+仅支持[ListItem](ts-container-listitem.md)、[ListItemGroup](ts-container-listitemgroup.md)子组件和[自定义组件](../../../ui/state-management/arkts-create-custom-components.md)。自定义组件在List下使用时，请使用ListItem或ListItemGroup作为自定义组件的顶层组件，请勿直接给自定义组件设置属性和事件方法，因为List通过ListItem或ListItemGroup管理子组件的布局和事件处理，直接设置可能导致部分功能无法正常生效。
 
 支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
 
@@ -330,6 +330,7 @@ lanes(value: number | LengthConstrain, gutter?: Dimension)
 - value为LengthConstrain类型时，LengthConstrain中的minLength表示最小列宽，List组件会根据自身宽度在满足最小列宽的情况下计算最大列数。同时，LengthConstrain会作为最大最小布局宽度约束传递给List的子组件，子组件没有设置宽度时会生效该最大最小布局约束。
 - &nbsp;ListItemGroup在多列模式下也是独占一行，ListItemGroup中的ListItem按照List组件的lanes属性设置值来布局。
 - value为LengthConstrain类型时，计算ListItemGroup中的列数时会按照ListItemGroup的自身宽度计算。因此ListItemGroup宽度与List宽度不一致时，ListItemGroup中的列数与List中的列数可能不一样。
+- 多列或多行模式下，当List使用Repeat生成子组件时，同一个Repeat中不支持ListItemGroup与ListItem同时存在，否则可能导致滚动或显示异常。
 
 **卡片能力：** 从API version 9开始，该接口支持在ArkTS卡片中使用。
 
@@ -348,7 +349,7 @@ lanes(value: number | LengthConstrain, gutter?: Dimension)
 
 lanes(value: number | LengthConstrain | ItemFillPolicy, gutter?: Dimension)
 
-设置List组件交叉轴方向的布局数量和间距。List垂直滚动时，设置列数和列间距；List水平滚动时，设置行数和行间距。默认按一列或一行显示。在多列或多行模式下，ListItemGroup在垂直滚动时独占一行，在水平滚动时独占一列；ListItemGroup中的ListItem按照List组件的lanes属性设置值来布局。
+设置List组件交叉轴方向的布局数量和间距。List垂直滚动时，设置列数和列间距；List水平滚动时，设置行数和行间距。默认按一列或一行显示。在多列或多行模式下，ListItemGroup在垂直滚动时独占一行，在水平滚动时独占一列；ListItemGroup中的ListItem按照List组件的lanes属性设置值来布局。多列或多行模式下，当List使用Repeat生成子组件时，同一个Repeat中不支持ListItemGroup与ListItem同时存在，否则可能导致滚动或显示异常。
 
 **卡片能力：** 从API version 22开始，该接口支持在ArkTS卡片中使用。
 
@@ -760,7 +761,7 @@ backPressBehavior(behavior: ListBackPressBehavior | undefined)
 
 | 参数名 | 类型   | 必填 | 说明                                               |
 | ------ | ------ | ---- | -------------------------------------------------- |
-| behavior  | [ListBackPressBehavior](#listbackpressbehavior对象说明) \| undefined | 是   | List组件的系统返回键行为选项。当前支持通过[ListBackPressBehavior](#listbackpressbehavior对象说明)参数，配置系统返回键生效时，是否收起已展开的ListItem的滑出组件。<br/>设置为undefined时，恢复默认行为，即系统返回键生效时，收起已展开的ListItem的滑出组件。|
+| behavior  | [ListBackPressBehavior](#listbackpressbehavior) \| undefined | 是   | List组件的系统返回键行为选项。当前支持通过[ListBackPressBehavior](#listbackpressbehavior)参数，配置系统返回键生效时，是否收起已展开的ListItem的滑出组件。<br/>设置为undefined时，恢复默认行为，即系统返回键生效时，收起已展开的ListItem的滑出组件。|
 
 ### enableEditMode
 
@@ -843,7 +844,7 @@ ListItemGroup吸顶或吸底效果枚举。
 | NORMAL   | 0 | 默认列表限位动画速度，适用于列表项主轴方向尺寸较大（如接近列表视口（即列表可视区域）主轴尺寸），每次滑动仅滚动一个列表项的场景。            |
 | SLOW  | 1 | 列表限位动画速度低于NORMAL，适用于列表项主轴方向尺寸较小（如远小于列表视口（即列表可视区域）主轴尺寸），每次滑动需滚动多个列表项的场景。 |
 
-## ListBackPressBehavior对象说明
+## ListBackPressBehavior
 
 定义List组件的系统返回键行为。
 
