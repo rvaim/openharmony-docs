@@ -4593,7 +4593,7 @@ try {
 
 setAdditionalInfo(bundleName: string, additionalInfo: string): void
 
-设置指定应用的额外信息。此接口仅供应用市场调用，用于写入其业务运营所需的专有管理字段（如内部版本号等）。
+设置指定应用的自定义扩展管理信息。该接口仅供应用市场调用，用于写入其业务运营所需的专有管理字段（如内部版本号等）。
 
 **系统接口：** 此接口为系统接口。
 
@@ -4606,7 +4606,7 @@ setAdditionalInfo(bundleName: string, additionalInfo: string): void
 | 参数名                | 类型                             | 必填 | 说明                                               |
 | --------------------- | ------------------------------- | ---- | -------------------------------------------------- |
 | bundleName            | string                          | 是   | 指定应用的包名。                                    |
-| additionalInfo        | string                          | 是   | 需要设置的应用的额外信息。                           |
+| additionalInfo        | string                          | 是   | 需要设置的应用的自定义扩展管理信息。                           |
 
 **错误码：**
 
@@ -4643,7 +4643,7 @@ try {
 
 setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, appIndex: number): void
 
-设置指定应用的额外信息。此接口仅供应用市场调用，用于写入其业务运营所需的专有管理字段（如内部版本号等）。
+设置指定应用的自定义扩展管理信息。该接口仅供应用市场调用，用于写入其业务运营所需的专有管理字段（如内部版本号等）。
 
 **起始版本：** 26.0.1
 
@@ -4660,7 +4660,7 @@ setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, appIndex: n
 | 参数名                | 类型                             | 必填 | 说明                                               |
 | --------------------- | ------------------------------- | ---- | -------------------------------------------------- |
 | bundleName            | string                          | 是   | 指定应用的包名。                                    |
-| additionalInfo        | string                          | 是   | 需要设置的应用的额外信息。                           |
+| additionalInfo        | string                          | 是   | 需要设置的应用的自定义扩展管理信息。                           |
 | appIndex              | number  | 是   | 指定的应用分身索引。取值范围：0或10000。                  |
 
 **错误码：**
