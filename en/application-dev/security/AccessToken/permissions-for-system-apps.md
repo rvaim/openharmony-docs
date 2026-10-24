@@ -9758,3 +9758,31 @@ Allows a system application to connect an agent in the background.
 **Supported devices**: phones | PCs/2-in-1 devices | tablets |  TVs | wearables | cars
 
 **Valid since**: 26.1.0
+
+## ohos.permission.vehicle.AALE_LIGHTRES_SERVICE
+
+Allows an application to bind to the Light Resource Management Service (LightResManagerService).
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: cars
+
+**Since**: 26.0.1
+
+## ohos.permission.vehicle.AALE_AMBIENT_SERVICE
+
+Allows an application to bind to the automotive ambient light engine service (AaleService).
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: cars
+
+**Since**: 26.0.1

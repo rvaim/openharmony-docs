@@ -9813,3 +9813,31 @@
 **支持设备**：Phone | PC/2in1 | Tablet | TV | Wearable | Car
 
 **起始版本**：26.1.0
+
+## ohos.permission.vehicle.AALE_LIGHTRES_SERVICE
+
+允许应用绑定灯效资源管理服务（LightResManagerService）。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Car
+
+**起始版本**：26.0.1
+
+## ohos.permission.vehicle.AALE_AMBIENT_SERVICE
+
+允许应用绑定车载氛围灯引擎服务（AaleService）。
+
+**权限级别**：system_basic
+
+**授权方式**：系统授权（system_grant）
+
+**是否支持证书授权**：true
+
+**支持设备**：Car
+
+**起始版本**：26.0.1
