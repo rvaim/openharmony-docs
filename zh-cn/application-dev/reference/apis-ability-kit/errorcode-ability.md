@@ -734,7 +734,7 @@ The caller does not exist.
 
 **错误描述**
 
-通过backToCallerAbilityWithResult接口向调用方返回结果时，如果根据传入的requestCode无法找到调用方，返回该错误码。
+通过backToCallerAbilityWithResult或backToCallerAppWithResult接口向调用方返回结果时，如果根据传入的requestCode无法找到调用方，返回该错误码。
 
 **可能原因**
 
@@ -756,7 +756,7 @@ BackToCaller is not supported.
 
 **错误描述**
 
-不支持通过backToCallerAbilityWithResult接口返回到调用方时，返回该错误码。
+不支持通过backToCallerAbilityWithResult或backToCallerAppWithResult接口返回到调用方时，返回该错误码。
 
 **可能原因**
 
@@ -3090,3 +3090,44 @@ The number of AgentCards in the bundle reaches the limit.
 **处理步骤**
 
 调用agentManager.deleteAgentCard删除不再需要的AgentCard。
+
+<!--Del-->
+## 16000301 任务已存在
+
+**错误信息**
+
+Task already exists.
+
+**错误描述**
+
+启动任务时，若指定任务ID的任务已存在，方法将返回该错误码。
+
+**可能原因**
+
+调用[startTask](js-apis-app-agent-taskManager-sys.md#taskmanagerstarttask)接口时，传入的taskId对应的任务尚未结束。任务存续期间，不允许重复启动相同taskId的任务。
+
+**处理步骤**
+
+1. 若该任务已存在，请先调用[finishTask](js-apis-app-agent-taskManager-sys.md#taskmanagerfinishtask)接口结束该任务，再重新启动。
+2. 若需要并行执行多个任务，请使用不同的taskId。
+
+## 16000302 任务不存在
+
+**错误信息**
+
+Task not found.
+
+**错误描述**
+
+结束任务时，若指定的任务不存在或已结束，方法将返回该错误码。
+
+**可能原因**
+
+1. 调用[finishTask](js-apis-app-agent-taskManager-sys.md#taskmanagerfinishtask)接口时，传入的taskId未通过[startTask](js-apis-app-agent-taskManager-sys.md#taskmanagerstarttask)接口启动，或该任务已结束（包括被系统自动结束，例如任务超时、创建者进程退出）。
+2. 调用方不是创建该任务的应用，仅任务创建者可以结束任务。
+
+**处理步骤**
+
+1. 确认传入的taskId对应的任务已启动且尚未结束。
+2. 确认调用方为创建该任务的应用。
+<!--DelEnd-->
