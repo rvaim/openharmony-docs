@@ -9759,6 +9759,24 @@ Allows a system application to connect an agent in the background.
 
 **Valid since**: 26.1.0
 
+## ohos.permission.ALLOW_DIRECT_BOOT
+
+Allows an application to start after a device cold boot or restart, before the user unlocks the device for the first time.
+
+> **NOTE**
+>
+> Applications requesting this permission must not access storage paths at the EL2 level or higher before the user unlocks the device for the first time.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: PCs/2-in-1 devices
+
+**Valid since**: 26.1.0
+
 ## ohos.permission.vehicle.AALE_LIGHTRES_SERVICE
 
 Allows an application to bind to the Light Resource Management Service (LightResManagerService).
