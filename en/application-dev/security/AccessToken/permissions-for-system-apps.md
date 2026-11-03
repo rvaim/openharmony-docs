@@ -8833,7 +8833,7 @@ Allows an application to access the vehicle camera.
 
 **Supported devices**: cars
 
-**Valid since**: 26.0.0
+**Valid since**: 26.0.1
 
 ## ohos.permission.MANAGE_CLONE_BUNDLE_PREFERENCES
  	 
@@ -8968,6 +8968,20 @@ With this permission, the application can add file event records, search for fil
 **Supported devices**: Phone | PC/2in1 | Tablet
 
 **Since**: 26.0.0
+
+## ohos.permission.CAMERA_DRIVER_MONITOR
+
+Allows an application to access the driver monitoring camera.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: cars
+
+**Valid since**: 26.0.1
 
 ## ohos.permission.ACCESS_MEDIALIB_SANDBOX
 
@@ -9804,3 +9818,17 @@ Allows an application to bind to the automotive ambient light engine service (Aa
 **Supported devices**: cars
 
 **Since**: 26.0.1
+
+## ohos.permission.PROMPT_INJECT_DETECTION
+
+Allows an application to detect indirect prompt injection attacks.
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Certificate-based authorization**: true
+
+**Supported devices**: PCs/2-in-1 devices | tablets
+
+**Valid since**: 26.0.1
