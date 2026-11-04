@@ -1763,6 +1763,22 @@ After obtaining this permission, the application can add sync root folders to th
 
 **Since**: 26.0.1
 
+## ohos.permission.HIDDEN_CAMERA_DETECTION
+
+Allows an application to detect hidden cameras.
+
+With this permission, the application can assist users in detecting whether hidden cameras exist in the current space (such as hotels or guesthouses) to protect user privacy.
+
+<!--RP120--><!--RP120End-->
+
+**Permission level**: system_basic
+
+**Authorization mode**: system_grant
+
+**Supported devices**: phones
+
+**Valid since**: 26.0.1
+
 ## ohos.permission.INPUT_RECORDING
 
 Allows an application to listen for input events.
@@ -1777,6 +1793,20 @@ After obtaining this permission, the application can record and replay input eve
 
 **Supported devices**: PCs/2-in-1 devices
 
+**Since**: 26.1.0
+
+## ohos.permission.USE_ULTRA_FAST_AUDIO_STREAM
+ 
+Allows an application to create audio streams with a specified ultra‑low latency mode when creating audio playback or recording streams, so that the overall latency of the resulting audio stream is lower than that of the normal mode.
+ 
+<!--RP117--><!--RP117End-->
+ 
+**Permission level**: system_basic
+ 
+**Authorization mode**: system_grant
+ 
+**Supported devices**: PCs/2-in-1 devices | phones | tablets
+ 
 **Since**: 26.1.0
 
 ## ohos.permission.ACCESS_BOARD_INFO
