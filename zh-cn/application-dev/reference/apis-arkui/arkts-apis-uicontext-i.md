@@ -119,6 +119,8 @@ Swiper子组件的信息，包含子组件的唯一标识符和索引，可通�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 | 名称 | 类型 | 只读 | 可选 | 说明 |
 | -------- | -------- | -------- | -------- | -------- |
 | isAgent | boolean | 否 | 否 | 事件是否为Agent生成的事件。true表示该事件由系统Agent生成，或由具有ohos.permission.CONTROL_COMPONENT权限的应用注入；false表示用户生成的输入事件或其他注入事件。 |
