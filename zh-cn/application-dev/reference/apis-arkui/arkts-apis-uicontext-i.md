@@ -123,6 +123,6 @@ Swiper子组件的信息，包含子组件的唯一标识符和索引，可通�
 | -------- | -------- | -------- | -------- | -------- |
 | isAgent | boolean | 否 | 否 | 事件是否为Agent生成的事件。true表示该事件由系统Agent生成，或由具有ohos.permission.CONTROL_COMPONENT权限的应用注入；false表示用户生成的输入事件或其他注入事件。 |
 | type | [NodeSensitiveInputEventType](arkts-apis-uicontext-e.md#nodesensitiveinputeventtype) | 否 | 否 | 上报的输入事件类型。 |
-| touchEvent | [TouchEvent](arkui-ts/ts-universal-events-touch.md#touchevent对象说明) | 否 | 是 | 触摸事件，仅当type为NodeSensitiveInputEventType.TOUCH时有效。 |
-| mouseEvent | [MouseEvent](arkui-ts/ts-universal-mouse-key.md#mouseevent对象说明) | 否 | 是 | 鼠标事件，仅当type为NodeSensitiveInputEventType.MOUSE时有效。 |
-| keyEvent | [KeyEvent](arkui-ts/ts-universal-events-key.md#keyevent对象说明) | 否 | 是 | 按键事件，仅当type为NodeSensitiveInputEventType.KEY时有效。 |
+| touchEvent | [TouchEvent](arkui-ts/ts-universal-events-touch.md#touchevent对象说明) | 否 | 是 | 触摸事件，仅当type为NodeSensitiveInputEventType.TOUCH时有效。<br>默认值：undefined |
+| mouseEvent | [MouseEvent](arkui-ts/ts-universal-mouse-key.md#mouseevent对象说明) | 否 | 是 | 鼠标事件，仅当type为NodeSensitiveInputEventType.MOUSE时有效。<br>默认值：undefined |
+| keyEvent | [KeyEvent](arkui-ts/ts-universal-events-key.md#keyevent对象说明) | 否 | 是 | 按键事件，仅当type为NodeSensitiveInputEventType.KEY时有效。<br>默认值：undefined |

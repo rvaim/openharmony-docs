@@ -212,4 +212,4 @@ type NodeSensitiveInputCallback = (info: NodeSensitiveInputInfo, node?: FrameNod
 | 参数名 | 类型 | 必填 | 说明 |
 | -------- | -------- | -------- | -------- |
 | info | [NodeSensitiveInputInfo](arkts-apis-uicontext-i.md#nodesensitiveinputinfo) | 是 | 分发到节点的输入事件信息。 |
-| node | [FrameNode](js-apis-arkui-frameNode.md) | 否 | 接收输入事件的组件；若组件已释放，则返回null。 |
+| node | [FrameNode](js-apis-arkui-frameNode.md#framenode-1) | 否 | 接收输入事件的组件；若组件已释放，则返回null。 |

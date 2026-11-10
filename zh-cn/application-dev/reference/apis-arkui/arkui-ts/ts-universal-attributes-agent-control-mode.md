@@ -6,6 +6,10 @@
 <!--Tester: @songyanhong-->
 <!--Adviser: @Brilliantry_Rui-->
 
+Agent输入管控用于设置组件对Agent生成输入事件的管控级别，适用于需要限制Agent生成输入事件对敏感或关键组件进行操作的场景，可提升应用对Agent输入操作的可控性。
+
+**起始版本：** 26.1.0
+
 ## agentControlMode
 
 agentControlMode(value: AgentControlMode | undefined): T
@@ -24,7 +28,7 @@ agentControlMode(value: AgentControlMode | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | -------- | -------- | -------- | -------- |
-| value | [AgentControlMode](ts-appendix-enums.md#agentcontrolmode)&nbsp;\|&nbsp;undefined | 是 | 系统Agent生成事件的输入管控级别。 |
+| value | [AgentControlMode](ts-appendix-enums.md#agentcontrolmode)&nbsp;\|&nbsp;undefined | 是 | 系统Agent生成事件的输入管控级别。value为undefined时，表示不设置管控级别，组件对Agent生成事件的处理与未设置该属性时保持一致（默认允许）。 |
 
 **返回值：**
 
