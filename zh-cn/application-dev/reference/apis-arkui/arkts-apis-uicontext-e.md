@@ -170,6 +170,8 @@ UIContext对象的解析策略。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 | 名称 | 值 | 说明 |
 | -------- | -------- | -------- |
 | TOUCH | 0 | 上报的事件为触摸事件，事件对象由touchEvent字段承载。 |
