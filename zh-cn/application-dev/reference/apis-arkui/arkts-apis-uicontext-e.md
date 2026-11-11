@@ -174,6 +174,6 @@ UIContext对象的解析策略。
 
 | 名称 | 值 | 说明 |
 | -------- | -------- | -------- |
-| TOUCH | 0 | 上报的事件为触摸事件，事件对象由touchEvent字段承载。 |
-| MOUSE | 1 | 上报的事件为鼠标事件，事件对象由mouseEvent字段承载。 |
-| KEY | 2 | 上报的事件为按键事件，事件对象由keyEvent字段承载。 |
+| TOUCH | 0 | 上报的事件为触摸事件，事件对象由[NodeSensitiveInputInfo](arkts-apis-uicontext-i.md#nodesensitiveinputinfo)的touchEvent字段承载。 |
+| MOUSE | 1 | 上报的事件为鼠标事件，事件对象由[NodeSensitiveInputInfo](arkts-apis-uicontext-i.md#nodesensitiveinputinfo)的mouseEvent字段承载。 |
+| KEY | 2 | 上报的事件为按键事件，事件对象由[NodeSensitiveInputInfo](arkts-apis-uicontext-i.md#nodesensitiveinputinfo)的keyEvent字段承载。 |

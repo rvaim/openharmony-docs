@@ -28,7 +28,7 @@ agentControlMode(value: AgentControlMode | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | -------- | -------- | -------- | -------- |
-| value | [AgentControlMode](ts-appendix-enums.md#agentcontrolmode)&nbsp;\|&nbsp;undefined | 是 | Agent生成事件的输入管控级别。value为undefined时，表示不设置管控级别，组件对Agent生成事件的处理与未设置该属性时保持一致（默认允许）。 |
+| value | [AgentControlMode](ts-appendix-enums.md#agentcontrolmode)&nbsp;\|&nbsp;undefined | 是 | Agent生成事件的输入管控级别。value为undefined时，表示不设置管控级别，组件对Agent生成事件的处理与未设置该属性时保持一致（默认允许Agent生成事件注入）。 |
 
 **返回值：**
 
