@@ -9107,7 +9107,7 @@ Allows an application to access data on the external storage card of the dashcam
 
 **Supported devices**: cars
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
 ## ohos.permission.AUTH_MODEL_DOWNLOAD
 
@@ -9944,5 +9944,19 @@ With this permission, the system application can query daemon service informatio
 **Certificate-based authorization**: true
  
 **Supported devices**: PCs/2-in-1 devices | tablets
+ 
+**Valid since**: 26.1.0
+
+## ohos.permission.RESOURCE_SCHEDULE_PERF_HINT
+ 
+Allows a system application to report performance-sensitive scenario information.
+ 
+**Permission level**: system_basic
+ 
+**Authorization mode**: system_grant
+ 
+**Certificate-based authorization**: true
+ 
+**Supported devices**: PCs/2-in-1 devices | cars | phones | tablets | TVs | wearables
  
 **Valid since**: 26.1.0
