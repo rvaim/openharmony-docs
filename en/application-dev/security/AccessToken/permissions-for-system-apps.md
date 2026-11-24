@@ -8726,7 +8726,7 @@ Allows an application to append a content trust signature.
 
 ## ohos.permission.vehicle.MANAGE_TBOX_CELLULAR
 
-Allows an application to set cellular network information.
+Allows an application to configure cellular network-related information.
 
 **Permission level**: system_basic
 
@@ -8740,7 +8740,7 @@ Allows an application to set cellular network information.
 
 ## ohos.permission.vehicle.TBOX_CELLULAR_INFO
 
-Allows an application to read cellular network information.
+Allows an application to read cellular network-related information.
 
 **Permission level**: system_basic
 
@@ -8754,7 +8754,7 @@ Allows an application to read cellular network information.
 
 ## ohos.permission.vehicle.MANAGE_TBOX_WIFI
 
-Allows an application to set TBox WiFi related information.
+Allows an application to configure T-Box Wi-Fi-related information.
 
 **Permission level**: system_basic
 
@@ -8796,9 +8796,10 @@ Allows an application to trigger network packet capture.
 
 ## ohos.permission.vehicle.CCN_SELF_HEALING
 
-Allows the triggering of network self-check and self-healing.
+Allows an application to trigger network self-inspection and self-healing.
 
 **Permission level**: system_basic
+
 **Authorization mode**: system_grant
 
 **Certificate-based authorization**: true
@@ -9355,7 +9356,7 @@ Allows a system application to manage SoftBus resources.
 
 ## ohos.permission.INSTALL_DEVELOPER_ID_BUNDLE
 
-Allows an application to install freely distributable applications.
+Allows an application to install Distributing OpenHarmony PC Software Outside the AppGallery.
 
 **Permission level**: system_core
 
