@@ -3008,6 +3008,70 @@ connection.refreshGlobalHttpProxy().then((data: connection.HttpProxy) => {
 });
 ```
 
+## connection.renewDhcp
+
+renewDhcp(netHandle: NetHandle): void
+
+重新向DHCP服务器申请指定网络的IP地址。
+
+> **说明：**
+>
+> - 当前仅支持Wi-Fi和以太网网络，其他网络类型调用本接口返回错误码2100001。
+> - 当句柄对应的网络不存在或已断开时返回错误码2100003。
+> - 接口返回成功仅表示申请请求已下发，不代表IP地址更新已完成；IP地址的更新结果需通过监听网络状态变化（如[on('netAvailable')](#onnetavailable)）或重新调用[getConnectionProperties()](#connectiongetconnectionproperties)查询获取。
+> - 更新IP地址过程中终端会向DHCP服务器重新请求地址，服务器可能分配新的IP地址并导致该网络上已有连接中断，请勿在有长连接业务运行时调用本接口。
+> - 本接口同时触发IPv4地址更新；当网络已建立IPv6链路时同时触发IPv6地址更新。
+
+**起始版本**：26.1.0
+
+**模型约束**：此接口仅可在Stage模型下使用。
+
+**需要权限**：ohos.permission.ENTERPRISE_MANAGE_NETWORK
+
+**系统能力**：SystemCapability.Communication.NetManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| -------- | -------- | -------- | -------- |
+| netHandle | [NetHandle](#nethandle) | 是 | 网络句柄。 |
+
+**错误码：**
+
+以下错误码的详细介绍请参见[网络连接管理错误码](errorcode-net-connection.md)和[通用错误码](../errorcode-universal.md)。
+
+| 错误码ID | 错误信息 |
+| -------- | -------- |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 2100001 | Invalid parameter value. |
+| 2100002 | Failed to connect to the service. |
+| 2100003 | System internal error. |
+
+**示例：**
+
+```ts
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 获取所有已激活的网络句柄
+  let netHandles: connection.NetHandle[] = connection.getAllNetsSync();
+  for (let netHandle of netHandles) {
+    // 查询网络能力，筛选出Wi-Fi或以太网网络
+    let capabilities = connection.getNetCapabilitiesSync(netHandle);
+    if (capabilities.bearerTypes.includes(connection.NetBearType.BEARER_WIFI) ||
+      capabilities.bearerTypes.includes(connection.NetBearType.BEARER_ETHERNET)) {
+      connection.renewDhcp(netHandle);
+      console.info('Succeeded to renewDhcp');
+      break;
+    }
+  }
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to renewDhcp. Code:${error.code}, message:${error.message}`);
+}
+```
+
 ## NetConnection
 
 网络连接对象类型。
