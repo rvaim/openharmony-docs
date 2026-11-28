@@ -10,7 +10,7 @@
 
 提供NativeModule接口的统一入口函数，用于初始化C-API环境、获取指定类型的Native模块接口集合，以及获取最新一次的报错信息。
 
-**引用文件：** <arkui/native_interface.h>
+**引用文件：** \<arkui/native_interface.h\>
 
 **库：** libace_ndk.z.so
 

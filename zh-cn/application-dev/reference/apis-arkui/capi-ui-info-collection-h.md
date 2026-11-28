@@ -10,7 +10,7 @@
 
 声明供应用内智能体和UI自动化使用的接口，用于监听UI交互事件并获取命中的节点。<br>返回状态码的函数通过[ArkUI_ErrorCode](capi-arkui-nativemodule-arkui-error-code-h.md#arkui_errorcode)报告错误。接口执行完成后，通过回调函数返回异步执行结果。这些接口不通过错误码变量errno报告错误，调用后该变量的取值未作规定，不得据此判断调用是否成功。
 
-**引用文件：** <arkui/ui_info_collection.h>
+**引用文件：** \<arkui/ui_info_collection.h\>
 
 **库：** libace_ndk.z.so
 
@@ -76,7 +76,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| void (*OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback)( const OH_ArkUI_NativeModule_UIJsonWrapper *json, void *userData) | 定义接收感知到的交互事件的回调类型。<br>回调通过借用的[OH_ArkUI_NativeModule_UIJsonWrapper](capi-arkui-nativemodule-oh-arkui-nativemodule-uijsonwrapper.md)对象接收事件数据，不取得该对象的所有权。对象仅在本次回调执行期间有效，回调不得保留或销毁该对象。事件数据中的所有位置坐标均相对于屏幕（显示器），单位为物理像素（px）。事件数据顶层始终包含schemaVersion字段。顶层结构为{ "schemaVersion": 1, "type": "<event type>", ... }。<br>各事件类型对应的字段见[OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback()](#oh_arkui_nativemodule_uiinfocollectioninteractionjsoncallback)。 |
+| void (*OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback)( const OH_ArkUI_NativeModule_UIJsonWrapper *json, void *userData) | 定义接收感知到的交互事件的回调类型。<br>回调通过借用的[OH_ArkUI_NativeModule_UIJsonWrapper](capi-arkui-nativemodule-oh-arkui-nativemodule-uijsonwrapper.md)对象接收事件数据，不取得该对象的所有权。对象仅在本次回调执行期间有效，回调不得保留或销毁该对象。事件数据中的所有位置坐标均相对于屏幕（显示器），单位为物理像素（px）。事件数据顶层始终包含schemaVersion字段。顶层结构为{ "schemaVersion": 1, "type": "\<event type\>", ... }。<br>各事件类型对应的字段见[OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback()](#oh_arkui_nativemodule_uiinfocollectioninteractionjsoncallback)。 |
 | void (*OH_ArkUI_NativeModule_UIAgentJsonCallback)(ArkUI_ContextHandle context, uint64_t requestId, ArkUI_ErrorCode errorCode, OH_ArkUI_NativeModule_UIJsonWrapper *json, void *userData) | 定义异步JSON树采集请求完成时调用的回调函数类型。<br>每个被接受的请求均在UI线程上触发且仅触发一次回调。仅当errorCode为[ARKUI_ERROR_CODE_NO_ERROR](capi-arkui-nativemodule-arkui-error-code-h.md#arkui_errorcode)时，回调才会接收非NULL的JSON对象并取得其所有权。调用方必须调用[OH_ArkUI_NativeModule_UIJsonWrapperDestroy()](capi-ui-json-wrapper-h.md#oh_arkui_nativemodule_uijsonwrapperdestroy)释放该对象。 |
 | void (*OH_ArkUI_NativeModule_UIContentChangeEventCallback)( const OH_ArkUI_NativeModule_UIContentChangeEvent* event, void* userData) | 定义已注册的ArkUI内容变化事件触发时调用的回调函数类型。<br>回调在注册时指定的UI上下文所关联的UI线程上执行。事件快照不可修改，且仅在本次回调返回前有效。ArkUI仅借用userData，不取得其所有权，也不会访问或释放其指向的数据。 |
 | void (*OH_ArkUI_NativeModule_ImageCollectionCallback)(ArkUI_ErrorCode errorCode, OH_ArkUI_NativeModule_ImageCollection* collection, void* userData) | 定义用于返回ArkUI节点图像采集结果的回调函数类型。<br>对于每个被接受的请求，框架都会在UI线程上调用且仅调用一次此回调。每个非NULL的collection都会转移给调用方。即使部分结果项失败，也会返回集合。调用方必须调用[OH_ArkUI_NativeModule_ImageCollectionDestroy()](#oh_arkui_nativemodule_imagecollectiondestroy)释放每个非NULL集合。<br>框架将userData原样传回，不会解引用该指针，也不会复制或释放其指向的对象。调用方必须保证该对象在回调结束使用前一直有效。 |
@@ -98,15 +98,15 @@ enum OH_ArkUI_NativeModule_UIInfoCollection_InteractionEventType
 | 枚举项 | 描述 |
 | -- | -- |
 | OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_NONE = 0 | 无事件。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_TAP = 1 << 0 | 点击手势。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_CLICK = 1 << 1 | 点击事件。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_LONG_PRESS = 1 << 2 | 长按手势。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_PAN = 1 << 3 | 拖动手势。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_PINCH = 1 << 4 | 捏合手势。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_ROTATION = 1 << 5 | 旋转手势。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_SWIPE = 1 << 6 | 滑动手势。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_DRAG = 1 << 7 | 统一拖拽事件。 |
-| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_TOUCH = 1 << 8 | 原始触摸按下或抬起事件。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_TAP = 1 \<\< 0 | 点击手势。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_CLICK = 1 \<\< 1 | 点击事件。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_LONG_PRESS = 1 \<\< 2 | 长按手势。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_PAN = 1 \<\< 3 | 拖动手势。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_PINCH = 1 \<\< 4 | 捏合手势。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_ROTATION = 1 \<\< 5 | 旋转手势。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_SWIPE = 1 \<\< 6 | 滑动手势。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_DRAG = 1 \<\< 7 | 统一拖拽事件。 |
+| OH_ARKUI_NATIVEMODULE_UIINFOCOLLECTION_INTERACTION_EVENT_TOUCH = 1 \<\< 8 | 原始触摸按下或抬起事件。 |
 
 ### OH_ArkUI_NativeModule_UIAgentTreeType
 
@@ -139,9 +139,9 @@ enum OH_ArkUI_NativeModule_UIContentChangeEventCategory
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_NATIVEMODULE_EVENT_CATEGORY_PAGE = 1U << 0 | 页面切换事件，包括Navigation、Router、Swiper和Tabs的切换事件。 |
-| OH_ARKUI_NATIVEMODULE_EVENT_CATEGORY_SCROLL = 1U << 1 | 滚动事件。 |
-| OH_ARKUI_NATIVEMODULE_EVENT_CATEGORY_OVERLAY = 1U << 2 | 浮层事件，例如模态、菜单或弹窗事件。 |
+| OH_ARKUI_NATIVEMODULE_EVENT_CATEGORY_PAGE = 1U \<\< 0 | 页面切换事件，包括Navigation、Router、Swiper和Tabs的切换事件。 |
+| OH_ARKUI_NATIVEMODULE_EVENT_CATEGORY_SCROLL = 1U \<\< 1 | 滚动事件。 |
+| OH_ARKUI_NATIVEMODULE_EVENT_CATEGORY_OVERLAY = 1U \<\< 2 | 浮层事件，例如模态、菜单或弹窗事件。 |
 | OH_ARKUI_NATIVEMODULE_EVENT_CATEGORY_ALL = ~0U | 所有受支持的事件类别。 |
 
 ### OH_ArkUI_NativeModule_UIContentChangeIgnoreType
@@ -158,9 +158,9 @@ enum OH_ArkUI_NativeModule_UIContentChangeIgnoreType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_NATIVEMODULE_CONTENTCHANGE_IGNORE_SCROLLBY = 1U << 0 | 按指定偏移量滚动（[scrollBy](arkui-ts/ts-container-scroll.md#scrollby9)）的事件。 |
-| OH_ARKUI_NATIVEMODULE_CONTENTCHANGE_IGNORE_SCROLLTO = 1U << 1 | 滚动到指定位置（[scrollTo](arkui-ts/ts-container-scroll.md#scrollto)）的事件。 |
-| OH_ARKUI_NATIVEMODULE_CONTENTCHANGE_IGNORE_TOAST = 1U << 2 | Toast提示事件。 |
+| OH_ARKUI_NATIVEMODULE_CONTENTCHANGE_IGNORE_SCROLLBY = 1U \<\< 0 | 按指定偏移量滚动（[scrollBy](arkui-ts/ts-container-scroll.md#scrollby9)）的事件。 |
+| OH_ARKUI_NATIVEMODULE_CONTENTCHANGE_IGNORE_SCROLLTO = 1U \<\< 1 | 滚动到指定位置（[scrollTo](arkui-ts/ts-container-scroll.md#scrollto)）的事件。 |
+| OH_ARKUI_NATIVEMODULE_CONTENTCHANGE_IGNORE_TOAST = 1U \<\< 2 | Toast提示事件。 |
 
 ### OH_ArkUI_NativeModule_UIContentChangeEventType
 
@@ -202,7 +202,7 @@ typedef void (*OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback)(co
 
 定义接收感知到的交互事件的回调类型。
 
-回调通过借用的[OH_ArkUI_NativeModule_UIJsonWrapper](capi-arkui-nativemodule-oh-arkui-nativemodule-uijsonwrapper.md)对象接收事件数据，不取得该对象的所有权。对象仅在本次回调执行期间有效，回调不得保留或销毁该对象。事件数据中的所有位置坐标均相对于屏幕（显示器），单位为物理像素（px）。事件数据顶层始终包含schemaVersion字段。顶层结构为{ "schemaVersion": 1, "type": "<event type>", ... }。
+回调通过借用的[OH_ArkUI_NativeModule_UIJsonWrapper](capi-arkui-nativemodule-oh-arkui-nativemodule-uijsonwrapper.md)对象接收事件数据，不取得该对象的所有权。对象仅在本次回调执行期间有效，回调不得保留或销毁该对象。事件数据中的所有位置坐标均相对于屏幕（显示器），单位为物理像素（px）。事件数据顶层始终包含schemaVersion字段。顶层结构为{ "schemaVersion": 1, "type": "\<event type\>", ... }。
 
 **起始版本：** 26.1.0
 
