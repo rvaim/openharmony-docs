@@ -720,7 +720,7 @@ struct ModalUIExtensionExample {
 缩放、平移、旋转等图形变换属性只对被截图组件的子组件生效；对目标组件本身应用图形变换属性不生效，显示的还是图形变换前的效果。
 
 ### getWithRange<sup>20+</sup>
-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>;
+getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean, options?: componentSnapshot.SnapshotOptions): Promise\<image.PixelMap\>;
 
 传入两个组件的ID，获取范围内的组件的截图，并通过Promise返回结果。
 

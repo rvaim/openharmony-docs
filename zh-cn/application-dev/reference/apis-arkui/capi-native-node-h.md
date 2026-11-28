@@ -10,7 +10,7 @@
 
 提供NativeNode接口的类型定义。
 
-**引用文件：** <arkui/native_node.h>
+**引用文件：** \<arkui/native_node.h\>
 
 **库：** libace_ndk.z.so
 

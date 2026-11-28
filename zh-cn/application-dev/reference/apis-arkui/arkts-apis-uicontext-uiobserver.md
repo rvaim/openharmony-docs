@@ -2603,7 +2603,7 @@ on(type: 'windowSizeLayoutBreakpointChange', callback: Callback\<observer.Window
 | 参数名       | 类型                                                         | 必填 | 说明                                                         |
 | ------------ | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ |
 | type         | string                                                       | 是   | 监听事件，固定为'windowSizeLayoutBreakpointChange'，用于监听窗口尺寸布局断点发生改变。 |
-| callback     | Callback\<observer.[WindowSizeLayoutBreakpointInfo](js-apis-arkui-observer.md#windowsizelayoutbreakpointinfo22)> | 是   | 回调函数。携带WindowSizeLayoutBreakpointInfo，包含窗口宽度和高度所在的布局断点枚举。 |
+| callback     | Callback\<observer.[WindowSizeLayoutBreakpointInfo](js-apis-arkui-observer.md#windowsizelayoutbreakpointinfo22)\> | 是   | 回调函数。携带WindowSizeLayoutBreakpointInfo，包含窗口宽度和高度所在的布局断点枚举。 |
 
 **示例：**
 
@@ -2673,7 +2673,7 @@ off(type: 'windowSizeLayoutBreakpointChange', callback?: Callback\<observer.Wind
 | 参数名       | 类型                                           | 必填 | 说明                                                         |
 | ------------ | ---------------------------------------------- | ---- | ------------------------------------------------------------ |
 | type         | string                                         | 是   | 监听事件，固定为'windowSizeLayoutBreakpointChange'，用于监听窗口尺寸布局断点发生改变。 |
-| callback     | Callback\<observer.[WindowSizeLayoutBreakpointInfo](js-apis-arkui-observer.md#windowsizelayoutbreakpointinfo22)>    | 否   | 需要被注销的回调函数。若不指定具体的回调函数，则注销该[UIContext](arkts-apis-uicontext-uicontext.md)下所有窗口尺寸布局断点变化事件监听。 |
+| callback     | Callback\<observer.[WindowSizeLayoutBreakpointInfo](js-apis-arkui-observer.md#windowsizelayoutbreakpointinfo22)\>    | 否   | 需要被注销的回调函数。若不指定具体的回调函数，则注销该[UIContext](arkts-apis-uicontext-uicontext.md)下所有窗口尺寸布局断点变化事件监听。 |
 
 **示例：**
 
@@ -2761,7 +2761,7 @@ offSwiperContentUpdate(callback?: Callback\<SwiperContentInfo\>): void
 
 | 参数名   | 类型                         | 必填 | 说明                                                         |
 | -------- | ---------------------------- | ---- | ------------------------------------------------------------ |
-| callback | Callback\<[SwiperContentInfo](./arkts-apis-uicontext-i.md#swipercontentinfo22)> | 否   | 需要被注销的回调函数。不传参数时，取消所有Swiper组件上内容切换事件的监听回调。 |
+| callback | Callback\<[SwiperContentInfo](./arkts-apis-uicontext-i.md#swipercontentinfo22)\> | 否   | 需要被注销的回调函数。不传参数时，取消所有Swiper组件上内容切换事件的监听回调。 |
 
 **示例：**
 

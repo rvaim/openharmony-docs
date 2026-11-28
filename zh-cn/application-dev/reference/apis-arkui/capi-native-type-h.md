@@ -10,7 +10,7 @@
 
 提供NativeModule公共的类型定义。
 
-**引用文件：** <arkui/native_type.h>
+**引用文件：** \<arkui/native_type.h\>
 
 **库：** libace_ndk.z.so
 
@@ -357,11 +357,11 @@ enum ArkUI_AccessibilityActionType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_ACCESSIBILITY_ACTION_CLICK = 1 << 0 | 点击操作。 |
-| ARKUI_ACCESSIBILITY_ACTION_LONG_CLICK = 1 << 1 | 长按操作。 |
-| ARKUI_ACCESSIBILITY_ACTION_CUT = 1 << 2 | 剪切操作。 |
-| ARKUI_ACCESSIBILITY_ACTION_COPY = 1 << 3 | 复制操作。 |
-| ARKUI_ACCESSIBILITY_ACTION_PASTE = 1 << 4 | 粘贴操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_CLICK = 1 \<\< 0 | 点击操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_LONG_CLICK = 1 \<\< 1 | 长按操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_CUT = 1 \<\< 2 | 剪切操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_COPY = 1 \<\< 3 | 复制操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_PASTE = 1 \<\< 4 | 粘贴操作。 |
 
 ### ArkUI_BorderStyle
 
@@ -512,8 +512,8 @@ enum ArkUI_SafeAreaType
 | 枚举项 | 描述 |
 | -- | -- |
 | ARKUI_SAFE_AREA_TYPE_SYSTEM = 1 | 系统默认非安全区域，包括状态栏、导航栏，该值为默认值。 |
-| ARKUI_SAFE_AREA_TYPE_CUTOUT = 1 << 1 | 设备的非安全区域，例如刘海屏或挖孔屏区域。 |
-| ARKUI_SAFE_AREA_TYPE_KEYBOARD = 1 << 2 | 软键盘区域。 |
+| ARKUI_SAFE_AREA_TYPE_CUTOUT = 1 \<\< 1 | 设备的非安全区域，例如刘海屏或挖孔屏区域。 |
+| ARKUI_SAFE_AREA_TYPE_KEYBOARD = 1 \<\< 2 | 软键盘区域。 |
 
 ### ArkUI_KeyboardAvoidMode
 
@@ -624,10 +624,10 @@ enum ArkUI_EdgeDirection
 | 枚举项 | 描述 |
 | -- | -- |
 | ARKUI_EDGE_DIRECTION_ALL = 0 | 设置四个方向的内容。 |
-| ARKUI_EDGE_DIRECTION_LEFT = 1 << 0 | 设置左侧方向内容。 |
-| ARKUI_EDGE_DIRECTION_RIGHT = 1 << 1 | 设置右侧方向内容。 |
-| ARKUI_EDGE_DIRECTION_TOP = 1 << 2 | 设置上侧方向内容。 |
-| ARKUI_EDGE_DIRECTION_BOTTOM = 1 << 3 | 设置下侧方向内容。 |
+| ARKUI_EDGE_DIRECTION_LEFT = 1 \<\< 0 | 设置左侧方向内容。 |
+| ARKUI_EDGE_DIRECTION_RIGHT = 1 \<\< 1 | 设置右侧方向内容。 |
+| ARKUI_EDGE_DIRECTION_TOP = 1 \<\< 2 | 设置上侧方向内容。 |
+| ARKUI_EDGE_DIRECTION_BOTTOM = 1 \<\< 3 | 设置下侧方向内容。 |
 
 ### ArkUI_CornerDirection
 
@@ -645,10 +645,10 @@ enum ArkUI_CornerDirection
 | 枚举项 | 描述 |
 | -- | -- |
 | ARKUI_CORNER_DIRECTION_ALL = 0 | 设置四个角度方向的内容。 |
-| ARKUI_CORNER_DIRECTION_TOP_LEFT = 1 << 0 | 设置左上侧方向内容。 |
-| ARKUI_CORNER_DIRECTION_TOP_RIGHT = 1 << 1 | 设置右上侧方向内容。 |
-| ARKUI_CORNER_DIRECTION_BOTTOM_LEFT = 1 << 2 | 设置左下侧方向内容。 |
-| ARKUI_CORNER_DIRECTION_BOTTOM_RIGHT = 1 << 3 | 设置右下侧方向内容。 |
+| ARKUI_CORNER_DIRECTION_TOP_LEFT = 1 \<\< 0 | 设置左上侧方向内容。 |
+| ARKUI_CORNER_DIRECTION_TOP_RIGHT = 1 \<\< 1 | 设置右上侧方向内容。 |
+| ARKUI_CORNER_DIRECTION_BOTTOM_LEFT = 1 \<\< 2 | 设置左下侧方向内容。 |
+| ARKUI_CORNER_DIRECTION_BOTTOM_RIGHT = 1 \<\< 3 | 设置右下侧方向内容。 |
 
 ### ArkUI_MenuPolicy
 

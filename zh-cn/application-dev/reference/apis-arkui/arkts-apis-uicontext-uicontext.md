@@ -914,7 +914,7 @@ struct AnimateToImmediatelyExample {
 
 ## animateTo
 
-animateTo(value: AnimateParam, event: () => void): void
+animateTo(value: AnimateParam, event: () =\> void): void
 
 提供animateTo接口，用于为闭包代码中的状态变化添加过渡动画效果。
 
@@ -939,7 +939,7 @@ animateTo(value: AnimateParam, event: () => void): void
 | 参数名   | 类型                                       | 必填   | 说明                                    |
 | ----- | ---------------------------------------- | ---- | ------------------------------------- |
 | value | [AnimateParam](arkui-ts/ts-explicit-animation.md#animateparam对象说明) | 是    | 设置动画效果相关参数。                           |
-| event | () => void                               | 是    | 指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
+| event | () =\> void                               | 是    | 指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
 
 **示例：**
 
@@ -1885,7 +1885,7 @@ export default class EntryAbility extends UIAbility {
 
 ## runScopedTask
 
-runScopedTask(callback: () => void): void
+runScopedTask(callback: () =\> void): void
 
 在当前UIContext对应的UI实例作用域内执行传入的回调函数，适用于[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)但需要将业务行为绑定到指定UI实例的场景。
 
@@ -1899,7 +1899,7 @@ runScopedTask(callback: () => void): void
 
 | 参数名      | 类型         | 必填   | 说明   |
 | -------- | ---------- | ---- | ---- |
-| callback | () => void | 是    | 需要在当前UIContext对应的UI实例作用域内执行的回调函数。 |
+| callback | () =\> void | 是    | 需要在当前UIContext对应的UI实例作用域内执行的回调函数。 |
 
 **示例：**
 
@@ -2014,7 +2014,7 @@ export default class EntryAbility extends UIAbility{
 
 ## getAtomicServiceBar<sup>11+</sup>
 
-getAtomicServiceBar(): Nullable\<AtomicServiceBar>
+getAtomicServiceBar(): Nullable\<AtomicServiceBar\>
 
 获取AtomicServiceBar对象，通过该对象设置原子化服务menuBar的属性。
 
@@ -2028,7 +2028,7 @@ getAtomicServiceBar(): Nullable\<AtomicServiceBar>
 
 | 类型                                              | 说明                                                         |
 | ------------------------------------------------- | ------------------------------------------------------------ |
-| Nullable<[AtomicServiceBar](arkts-apis-uicontext-atomicservicebar.md)> | 如果是原子化服务则返回AtomicServiceBar类型，否则返回undefined。 |
+| Nullable\<[AtomicServiceBar](arkts-apis-uicontext-atomicservicebar.md)\> | 如果是原子化服务则返回AtomicServiceBar类型，否则返回undefined。 |
 
 **示例：**
 
@@ -3250,7 +3250,7 @@ struct Frame {
 
 ## openBindSheet<sup>12+</sup>
 
-openBindSheet\<T extends Object>(bindSheetContent: ComponentContent\<T>, sheetOptions?: SheetOptions, targetId?: number): Promise&lt;void&gt;
+openBindSheet\<T extends Object\>(bindSheetContent: ComponentContent\<T\>, sheetOptions?: SheetOptions, targetId?: number): Promise&lt;void&gt;
 
 创建并弹出以bindSheetContent作为内容的半模态页面，使用Promise异步回调。通过该接口弹出的半模态页面样式完全按照bindSheetContent中设置的样式显示。
 
@@ -3273,7 +3273,7 @@ openBindSheet\<T extends Object>(bindSheetContent: ComponentContent\<T>, sheetOp
 
 | 参数名     | 类型                                       | 必填   | 说明      |
 | ------- | ---------------------------------------- | ---- | ------- |
-| bindSheetContent | [ComponentContent\<T>](js-apis-arkui-ComponentContent.md) | 是 | 半模态页面中显示的组件内容。 |
+| bindSheetContent | [ComponentContent\<T\>](js-apis-arkui-ComponentContent.md) | 是 | 半模态页面中显示的组件内容。 |
 | sheetOptions | [SheetOptions](arkui-ts/ts-universal-attributes-sheet-transition.md#sheetoptions) | 否    |   半模态页面样式。<br/>**说明：** <br/>1. 不支持设置SheetOptions.uiContext，该属性的值固定为当前实例的UIContext。<br/>2. 若不传递targetId，则不支持设置SheetOptions.preferType为POPUP样式，若设置了POPUP样式则使用CENTER样式替代。<br/>3. 若不传递targetId，则不支持设置SheetOptions.mode为EMBEDDED模式，默认为OVERLAY模式。<br/>4. 其余属性的默认值参考[SheetOptions](arkui-ts/ts-universal-attributes-sheet-transition.md#sheetoptions)文档。 |
 | targetId | number | 否    |   需要绑定组件的ID，若不指定则不绑定任何组件。id不存在时返回错误码120004。在传入undefined时返回错误码401。 |
 
@@ -3387,7 +3387,7 @@ struct UIContextBindSheet {
 
 ## updateBindSheet<sup>12+</sup>
 
-updateBindSheet\<T extends Object>(bindSheetContent: ComponentContent\<T>, sheetOptions: SheetOptions, partialUpdate?: boolean ): Promise&lt;void&gt;
+updateBindSheet\<T extends Object\>(bindSheetContent: ComponentContent\<T\>, sheetOptions: SheetOptions, partialUpdate?: boolean ): Promise&lt;void&gt;
 
 更新bindSheetContent对应的半模态页面的样式，使用Promise异步回调。
 
@@ -3406,7 +3406,7 @@ updateBindSheet\<T extends Object>(bindSheetContent: ComponentContent\<T>, sheet
 
 | 参数名     | 类型                                       | 必填   | 说明      |
 | ------- | ---------------------------------------- | ---- | ------- |
-| bindSheetContent | [ComponentContent\<T>](js-apis-arkui-ComponentContent.md) | 是 | 半模态页面中显示的组件内容。 |
+| bindSheetContent | [ComponentContent\<T\>](js-apis-arkui-ComponentContent.md) | 是 | 半模态页面中显示的组件内容。 |
 | sheetOptions | [SheetOptions](arkui-ts/ts-universal-attributes-sheet-transition.md#sheetoptions) | 是    |   半模态页面样式。<br/>**说明：** <br/>不支持更新SheetOptions.uiContext、SheetOptions.mode、回调函数。 |
 | partialUpdate | boolean | 否    |   半模态页面更新方式, 默认值为false。<br/>**说明：** <br/>1. true为增量更新，保留当前值，更新SheetOptions中的指定属性。 <br/>2. false为全量更新，除SheetOptions中的指定属性，其他属性恢复默认值。 |
 
@@ -3517,7 +3517,7 @@ struct UIContextBindSheet {
 
 ## closeBindSheet<sup>12+</sup>
 
-closeBindSheet\<T extends Object>(bindSheetContent: ComponentContent\<T>): Promise&lt;void&gt;
+closeBindSheet\<T extends Object\>(bindSheetContent: ComponentContent\<T\>): Promise&lt;void&gt;
 
 关闭bindSheetContent对应的半模态页面，使用Promise异步回调。
 
@@ -3536,7 +3536,7 @@ closeBindSheet\<T extends Object>(bindSheetContent: ComponentContent\<T>): Promi
 
 | 参数名     | 类型                                       | 必填   | 说明      |
 | ------- | ---------------------------------------- | ---- | ------- |
-| bindSheetContent | [ComponentContent\<T>](js-apis-arkui-ComponentContent.md) | 是 | 半模态页面中显示的组件内容。 |
+| bindSheetContent | [ComponentContent\<T\>](js-apis-arkui-ComponentContent.md) | 是 | 半模态页面中显示的组件内容。 |
 
 **返回值：**
 
@@ -3920,7 +3920,7 @@ enableSwipeBack(enabled: Optional\<boolean\>): void
 
 | 参数名     | 类型    | 必填   | 说明      |
 | --- | --- | --- | --- |
-| enabled | Optional\<boolean> | 是 | 是否支持应用内横向滑动返回，默认值为true。<br>当值为true时，支持应用内横向滑动返回。<br>当值为false时，不支持应用内横向滑动返回。|
+| enabled | Optional\<boolean\> | 是 | 是否支持应用内横向滑动返回，默认值为true。<br>当值为true时，支持应用内横向滑动返回。<br>当值为false时，不支持应用内横向滑动返回。|
 
 **示例：**
 

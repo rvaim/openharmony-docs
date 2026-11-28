@@ -10,7 +10,7 @@
 
 提供NativeRender接口的类型定义，支持创建和管理渲染节点、设置渲染属性、自定义绘制内容，以及配置遮罩、裁剪和模糊效果，适用于在Native侧构建和管理自定义渲染节点树、扩展自定义绘制效果的场景。更多详细介绍请参考[构建渲染节点](../../ui/ndk-embed-render-components.md)。
 
-**引用文件：** <arkui/native_render.h>
+**引用文件：** \<arkui/native_render.h\>
 
 **库：** libace_ndk.z.so
 
@@ -2928,7 +2928,7 @@ void OH_ArkUI_RenderNodeUtils_SetCommandPathOptionCommands(ArkUI_CommandPathOpti
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_CommandPathOption](./capi-arkui-nativemodule-arkui-commandpathoption.md)* option | 指向自定义绘制路径的指针。 |
-| char* commands | 命令值。入参格式为SVG[基础形状](./arkui-ts/ts-basic-svg.md#基础形状)中的\<path>形状标签。 |
+| char* commands | 命令值。入参格式为SVG[基础形状](./arkui-ts/ts-basic-svg.md#基础形状)中的\<path\>形状标签。 |
 
 ### OH_ArkUI_RenderNodeUtils_CreateRenderNodeMaskOptionFromRectShape()
 
