@@ -6,7 +6,7 @@
 <!--Tester: @xiong0104-->
 <!--Adviser: @Brilliantry_Rui-->
 
-Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis-image-PixelMap.md)、[ResourceStr](ts-types.md#resourcestr)和[DrawableDescriptor](#drawabledescriptor10)类型的数据源，支持svg格式，其他需要解码的图片格式请参考[ImageSource](../../apis-image-kit/arkts-apis-image-ImageSource.md#属性)的supportedFormats属性说明。
+Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis-image-PixelMap.md)、[ResourceStr](ts-types.md#resourcestr)和[DrawableDescriptor](#drawabledescriptor10)类型的数据源，支持svg格式，其他需要解码的图片格式请参考[ImageSource](../../apis-image-kit/arkts-apis-image-ImageSource.md#属性)的supportedFormats属性说明。支持的PixelMap类型请参考[图片绘制（ArkTS）](../../../graphics/pixelmap-drawing-arkts.md)。
 
 > **说明：**
 >
