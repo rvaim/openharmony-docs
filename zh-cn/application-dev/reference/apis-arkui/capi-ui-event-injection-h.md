@@ -10,7 +10,7 @@
 
 声明供应用内智能体和UI自动化使用的接口，用于向指定UI节点注入控制命令。
 
-**引用文件：** <arkui/ui_event_injection.h>
+**引用文件：** \<arkui/ui_event_injection.h\>
 
 **库：** libace_ndk.z.so
 

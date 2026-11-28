@@ -16,7 +16,7 @@
 
 ## customProperty
 
-customProperty(name: string, value: Optional\<Object>): T
+customProperty(name: string, value: Optional\<Object\>): T
 
 设置组件的自定义属性。
 
@@ -35,7 +35,7 @@ API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-cre
 | 参数名 | 类型                                                 | 必填 | 说明                                                         |
 | ------ | ---------------------------------------------------- | ---- | ------------------------------------------------------------ |
 | name  | string | 是   | 自定义属性的名称。 |
-| value  | [Optional](#optionalt)\<Object> | 是   | 自定义属性的值。 |
+| value  | [Optional](#optionalt)\<Object\> | 是   | 自定义属性的值。 |
 
 **返回值：**
 
@@ -44,9 +44,9 @@ API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-cre
 | T | 返回当前组件，可用于链式调用。 |
 
 
-## Optional\<T>
+## Optional\<T\>
 
-type Optional\<T> = T | undefined
+type Optional\<T\> = T | undefined
 
 定义可选类型，其值可以是undefined。
 

@@ -145,7 +145,7 @@ struct MyComponent {
 
 ## queryNavDestinationInfo<sup>18+</sup>
 
-queryNavDestinationInfo(isInner: Optional\<boolean>): NavDestinationInfo | undefined
+queryNavDestinationInfo(isInner: Optional\<boolean\>): NavDestinationInfo | undefined
 
 查询当前自定义组件距离最近的NavDestination信息（要求该NavDestination是Navigation的导航页或子页），isInner为true表示向内查找，false表示向外查找。
 
@@ -157,7 +157,7 @@ queryNavDestinationInfo(isInner: Optional\<boolean>): NavDestinationInfo | undef
 
 | 参数名 | 类型                                          | 必填 | 说明                                          |
 | ------ | --------------------------------------------- | ---- | --------------------------------------------- |
-| isInner  | [Optional](ts-universal-attributes-custom-property.md#optionalt)\<boolean> | 是   | true：向内查询最近的，且在栈内的NavDestinationInfo的详细信息。<br/>false：向外查询最近的，且在栈内的NavDestinationInfo的详细信息。|
+| isInner  | [Optional](ts-universal-attributes-custom-property.md#optionalt)\<boolean\> | 是   | true：向内查询最近的，且在栈内的NavDestinationInfo的详细信息。<br/>false：向外查询最近的，且在栈内的NavDestinationInfo的详细信息。|
 
 **返回值：**
 

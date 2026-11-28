@@ -34,7 +34,7 @@
 
 ## 接口说明
 
-本开发指导涉及的关键接口如下表所示，完整参数、返回值和错误码说明见[ui_info_collection.h](../reference/apis-arkui/capi-ui-info-collection-h.md)和[ui_json_wrapper.h](../reference/apis-arkui/capi-ui-json-wrapper-h.md)，常见失败情形见[常见问题](#常见问题)。图像采集取出的PixelMap需配合Image Kit的<multimedia/image_framework/image/pixelmap_native.h>处理，例如通过[OH_PixelmapNative_ConvertPixelmapNativeToNapi](../reference/apis-image-kit/capi-pixelmap-native-h.md#oh_pixelmapnative_convertpixelmapnativetonapi)转换为ArkTS对象渲染。
+本开发指导涉及的关键接口如下表所示，完整参数、返回值和错误码说明见[ui_info_collection.h](../reference/apis-arkui/capi-ui-info-collection-h.md)和[ui_json_wrapper.h](../reference/apis-arkui/capi-ui-json-wrapper-h.md)，常见失败情形见[常见问题](#常见问题)。图像采集取出的PixelMap需配合Image Kit的\<multimedia/image_framework/image/pixelmap_native.h\>处理，例如通过[OH_PixelmapNative_ConvertPixelmapNativeToNapi](../reference/apis-image-kit/capi-pixelmap-native-h.md#oh_pixelmapnative_convertpixelmapnativetonapi)转换为ArkTS对象渲染。
 
 ### 节点图片采集接口
 
